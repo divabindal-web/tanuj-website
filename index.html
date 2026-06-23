@@ -1,495 +1,279 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Tanuj Shori — Founder & CEO, Square Yards</title>
-<meta name="description" content="Tanuj Shori is the Founder and CEO of Square Yards — India's largest proptech platform, ₹1,400 Cr+ revenue, operating in 9 countries.">
-<meta property="og:title" content="Tanuj Shori — Founder & CEO, Square Yards">
-<meta property="og:image" content="/tanuj.png">
-<link rel="stylesheet" href="shared.css">
-<style>
-/* ── INDEX-ONLY STYLES ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap');
 
-/* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 500px;position:relative;overflow:hidden;border-bottom:1px solid var(--ink08);}
-.hero-left{padding:136px var(--pad) 72px;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:2;}
-.hero-top{}
-.h-eye{display:flex;align-items:center;gap:14px;margin-bottom:44px;}
-.h-eye-line{width:32px;height:1px;background:var(--gold);}
-.h-eye-txt{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
-.h-est{font-family:var(--mono);font-size:11px;font-weight:300;color:var(--ink45);letter-spacing:.10em;margin-bottom:18px;}
-.hero-h1{font-family:var(--serif);font-size:clamp(54px,6vw,86px);font-weight:900;line-height:1.02;letter-spacing:-.025em;color:var(--ink);margin-bottom:32px;}
-.hero-h1 em{font-style:italic;font-weight:300;color:var(--gold);}
-.hero-h1 .bl{display:block;}
-.hero-desc{font-size:15px;font-weight:400;line-height:1.82;color:var(--ink70);max-width:420px;margin-bottom:44px;}
-.hero-ctas{display:flex;align-items:center;gap:18px;margin-bottom:56px;}
-.hero-yt{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink45);display:flex;align-items:center;gap:10px;transition:color .2s;}
-.hero-yt:hover{color:var(--ink);}
-.yt-circle{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--ink08);display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .2s,transform .28s;}
-.hero-yt:hover .yt-circle{border-color:var(--gold);transform:rotate(45deg);}
-.hero-foot{display:flex;align-items:flex-end;justify-content:space-between;}
-.ped-label{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink45);margin-bottom:11px;}
-.ped-tags{display:flex;gap:8px;flex-wrap:wrap;}
-.ped-tag{font-family:var(--mono);font-size:10px;font-weight:300;color:var(--ink70);letter-spacing:.06em;padding:5px 12px;border:1px solid var(--ink08);transition:border-color .2s,color .2s;}
-.ped-tag:hover{border-color:var(--gold);color:var(--gold);}
-.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:8px;}
-.scroll-lbl{font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink45);writing-mode:vertical-lr;}
-/* Hero portrait */
-.hero-right{position:relative;background:var(--cream);overflow:hidden;}
-.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:sepia(6%) contrast(1.05);}
-.hero-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--parchment) 0%,transparent 15%);}
-.hero-cap{position:absolute;bottom:24px;right:22px;font-family:var(--mono);font-size:9px;font-weight:300;color:rgba(14,12,7,.38);letter-spacing:.12em;text-align:right;line-height:1.8;}
-.hero-ghost{position:absolute;top:50%;right:16px;font-family:var(--serif);font-size:220px;font-weight:900;color:rgba(14,12,7,.025);line-height:1;transform:translateY(-50%);user-select:none;pointer-events:none;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  background:#F7F4EE;
+  color:#0E0C07;
+  font-family:'Inter',sans-serif;
+  font-weight:400;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;border:none;background:none;font-family:inherit;}
 
-/* METRICS */
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--ink08);}
-.met{padding:40px 32px;border-right:1px solid var(--ink08);position:relative;overflow:hidden;}
-.met:last-child{border-right:none;}
-.met::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width 1.8s cubic-bezier(.16,1,.3,1);}
-.met.go::after{width:var(--w);}
-.met-n{font-family:var(--mono);font-size:38px;font-weight:300;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-bottom:10px;}
-.met-n .g{color:var(--gold);}
-.met-l{font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--ink45);line-height:1.6;}
-
-/* THINKING (dark) */
-.thinking{background:var(--ink);color:var(--parchment);padding:96px var(--pad);position:relative;overflow:hidden;}
-.thinking::before{content:'THINK';position:absolute;right:-20px;top:50%;font-family:var(--serif);font-size:260px;font-weight:900;color:rgba(247,244,238,.022);line-height:1;transform:translateY(-50%);pointer-events:none;user-select:none;}
-.thinking .eye-label{color:var(--gold);}
-.think-grid{display:grid;grid-template-columns:1fr 1px 1fr;align-items:start;max-width:840px;background:rgba(247,244,238,0.03);padding:36px;border-radius:4px;}
-.think-div{background:rgba(247,244,238,.07);}
-.think-l{padding-right:48px;}
-.think-r{padding-left:48px;}
-.think-q{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:400;font-style:italic;line-height:1.42;color:var(--parchment);margin-bottom:26px;}
-.think-q em{font-style:normal;font-weight:700;color:var(--gold);}
-.think-attr{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,238,.3);}
-.w-item{padding:22px 0;border-bottom:1px solid rgba(247,244,238,.07);display:flex;align-items:flex-start;justify-content:space-between;gap:24px;cursor:pointer;transition:padding-left .22s;}
-.w-item:first-child{border-top:1px solid rgba(247,244,238,.07);}
-.w-item:hover{padding-left:10px;}
-.w-item:hover .w-title{color:var(--gold);}
-.w-item:hover .w-arr{color:var(--gold);transform:translate(3px,-3px);}
-.w-pub{font-family:var(--mono);font-size:10px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,244,238,.3);margin-bottom:7px;}
-.w-title{font-family:var(--serif);font-size:16px;font-weight:400;color:var(--parchment);line-height:1.52;transition:color .2s;}
-.w-yr{font-family:var(--mono);font-size:10px;font-weight:300;color:rgba(247,244,238,.22);letter-spacing:.08em;flex-shrink:0;margin-top:2px;}
-.w-arr{font-size:14px;color:rgba(247,244,238,.22);flex-shrink:0;transition:color .2s,transform .2s;}
-.think-cta{margin-top:32px;display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,238,.35);transition:color .2s;}
-.think-cta:hover{color:var(--gold);}
-
-/* JOURNEY */
-.journey{background:var(--parchment);}
-.journey-inner{display:grid;grid-template-columns:180px 340px;gap:36px;align-items:start;background:rgba(181,136,31,0.04);padding:32px;border-radius:4px;max-width:600px;}
-.j-h{font-family:var(--serif);font-size:clamp(36px,4vw,54px);font-weight:900;line-height:1.08;letter-spacing:-.022em;color:var(--ink);margin-bottom:22px;}
-.j-h em{font-style:italic;font-weight:300;color:var(--gold);}
-.j-body{font-size:14px;font-weight:400;line-height:1.85;color:var(--ink70);}
-.timeline{display:flex;flex-direction:column;position:relative;max-width:380px;}
-.timeline::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:var(--ink08);}
-.tl{display:flex;gap:24px;padding-bottom:26px;opacity:0;transform:translateX(-16px);transition:opacity .6s ease,transform .6s ease;}
-.tl.vis{opacity:1;transform:translateX(0);}
-.tl-dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink08);background:var(--parchment);flex-shrink:0;margin-top:4px;position:relative;z-index:1;transition:border-color .3s,background .3s;}
-.tl.vis .tl-dot{border-color:var(--gold);background:var(--gold-light);}
-.tl-yr{font-family:var(--mono);font-size:9px;font-weight:400;color:var(--gold);letter-spacing:.10em;margin-bottom:4px;}
-.tl-title{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.25;}
-.tl-desc{font-size:12px;font-weight:400;line-height:1.7;color:var(--ink70);max-width:340px;}
-
-/* ECOSYSTEM */
-.ecosystem{background:var(--cream);padding:80px var(--pad);}
-.eco-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;}
-.eco-visit{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink45);transition:color .2s;}
-.eco-visit:hover{color:var(--gold);}
-.eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink08);border:1px solid var(--ink08);}
-.eco-card{background:var(--parchment);padding:30px 26px;position:relative;overflow:hidden;transition:background .28s;display:block;}
-.eco-card:hover{background:var(--warm-white);}
-.eco-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .38s cubic-bezier(.16,1,.3,1);}
-.eco-card:hover::after{transform:scaleX(1);}
-.eco-idx{font-family:var(--mono);font-size:10px;font-weight:300;color:var(--gold);letter-spacing:.12em;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;}
-.eco-go{font-size:13px;opacity:0;transform:translate(-4px,4px);transition:opacity .25s,transform .25s;}
-.eco-card:hover .eco-go{opacity:1;transform:translate(0,0);}
-.eco-card:hover .eco-name{color:var(--gold);}
-.eco-name{transition:color .2s;}
-.eco-name{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--ink);margin-bottom:5px;}
-.eco-tag{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.eco-desc{font-size:12px;font-weight:400;line-height:1.7;color:var(--ink70);margin-bottom:14px;}
-.eco-stat{font-family:var(--mono);font-size:18px;font-weight:300;color:var(--ink);letter-spacing:-.02em;}
-.eco-stat span{color:var(--gold);}
-
-/* FEATURED articles preview on homepage — COMPACT */
-.featured-articles{background:var(--parchment);padding:64px var(--pad);}
-.featured-articles .card-grid{gap:20px;max-width:820px;}
-.featured-articles .a-card-img{aspect-ratio:16/9;margin-bottom:12px;}
-.featured-articles .cover-svg-text{font-size:24px;}
-.featured-articles .a-card-cat{font-size:9px;margin-bottom:6px;}
-.featured-articles .a-card-title{font-size:14px;line-height:1.34;margin-bottom:6px;}
-.featured-articles .a-card-excerpt{font-size:11px;line-height:1.55;}
-.featured-articles .a-card-meta{margin-top:10px;padding-top:10px;}
-.featured-articles .a-card-yr{font-size:9px;}
-.featured-articles .a-card-arr{font-size:12px;}
-.feat-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;}
-.feat-see-all{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink45);display:flex;align-items:center;gap:8px;transition:color .2s;}
-.feat-see-all:hover{color:var(--gold);}
-
-/* PRESS */
-.press-sec{background:var(--cream);padding:88px var(--pad);}
-.press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink08);border:1px solid var(--ink08);margin-top:52px;}
-.p-card{background:var(--parchment);padding:32px 28px;transition:background .25s;}
-.p-card:hover{background:var(--warm-white);}
-.p-pub{font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--ink);margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--ink08);}
-.p-q{font-family:var(--serif);font-size:15px;font-style:italic;font-weight:400;line-height:1.62;color:var(--ink);margin-bottom:14px;}
-.p-yr{font-family:var(--mono);font-size:9px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--ink45);}
-
-/* CONNECT */
-.connect{background:var(--ink);padding:120px var(--pad);text-align:center;position:relative;overflow:hidden;}
-.connect::before,.connect::after{content:'';position:absolute;top:50%;left:50%;border-radius:50%;border:1px solid rgba(181,136,31,.06);transform:translate(-50%,-50%);pointer-events:none;}
-.connect::before{width:580px;height:580px;}
-.connect::after{width:920px;height:920px;}
-.c-inner{position:relative;z-index:1;}
-.c-eye{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;}
-.c-h{font-family:var(--serif);font-size:clamp(42px,5vw,68px);font-weight:900;color:rgba(247,244,238,.92);line-height:1.06;letter-spacing:-.022em;margin-bottom:20px;}
-.c-h em{font-style:italic;font-weight:300;color:var(--gold);}
-.c-sub{font-size:15px;font-weight:400;color:rgba(247,244,238,.42);margin-bottom:48px;line-height:1.80;}
-.c-btns{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
-.c-btn-p{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:15px 38px;background:var(--gold);color:var(--ink);border:1.5px solid var(--gold);display:inline-block;transition:background .22s,color .22s;}
-.c-btn-p:hover{background:transparent;color:var(--gold);}
-.c-btn-g{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(247,244,238,.32);display:inline-flex;align-items:center;gap:6px;transition:color .2s;}
-.c-btn-g:hover{color:rgba(247,244,238,.7);}
-
-/* responsive */
-@media(max-width:960px){
-  .hero{grid-template-columns:1fr;}
-  .hero-right{min-height:300px;order:-1;}
-  .hero-ghost{display:none;}
-  .hero-left{padding:80px 20px 56px;}
-  .hero-foot{flex-direction:column;align-items:flex-start;gap:24px;}
-  .metrics{grid-template-columns:repeat(2,1fr);}
-  .met:nth-child(2){border-right:none;}
-  .think-grid{grid-template-columns:1fr;}
-  .think-div{display:none;}
-  .think-l{padding-right:0;margin-bottom:44px;}
-  .think-r{padding-left:0;}
-  .journey-inner{grid-template-columns:1fr;}
-  .eco-grid{grid-template-columns:1fr;}
-  .press-grid{grid-template-columns:1fr;}
+:root{
+  --ink:#0E0C07;
+  --ink70:rgba(14,12,7,0.70);
+  --ink45:rgba(14,12,7,0.45);
+  --ink22:rgba(14,12,7,0.22);
+  --ink08:rgba(14,12,7,0.08);
+  --parchment:#F7F4EE;
+  --cream:#EDE9DF;
+  --warm-white:#FDFCF8;
+  --gold:#B5881F;
+  --gold-light:rgba(181,136,31,0.12);
+  --gold-rule:rgba(181,136,31,0.3);
+  --serif:'Playfair Display',serif;
+  --sans:'Inter',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+  --max:1280px;
+  --pad:52px;
 }
 
-/* Image placeholder SVG covers for articles */
-.cover-1{background:linear-gradient(135deg,#1a1710 0%,#2d2618 60%,#1a1710 100%);}
-.cover-2{background:linear-gradient(135deg,#E8E3D8 0%,#D4CDB8 60%,#C8BFA8 100%);}
-.cover-3{background:linear-gradient(135deg,#1E160A 0%,#3A2C14 60%,#2A2010 100%);}
-.cover-4{background:linear-gradient(135deg,#EDE9DF 0%,#DDD7CA 60%,#CFC8B8 100%);}
-.cover-5{background:linear-gradient(135deg,#0E0C07 0%,#201A0A 60%,#2E260E 100%);}
-.cover-6{background:linear-gradient(135deg,#E5E0D4 0%,#D8D1C1 60%,#C8BFA8 100%);}
+/* ── CURSOR ── */
+.cur,
+.cur-ring{position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+.cur{width:6px;height:6px;background:var(--gold);border-radius:50%;transition:width .16s,height .16s,opacity .2s;}
+.cur-ring{width:26px;height:26px;border:1px solid rgba(181,136,31,.4);border-radius:50%;z-index:9998;transition:width .2s,height .2s,border-color .2s;}
+.cur.big{width:14px;height:14px;}
+.cur-ring.big{width:48px;height:48px;border-color:rgba(181,136,31,.15);}
+@media (hover:none),(pointer:coarse){.cur,.cur-ring{display:none!important;}}
 
-.cover-svg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
-.cover-svg-text{font-family:'Playfair Display',serif;font-size:42px;font-style:italic;font-weight:400;opacity:.18;letter-spacing:-.02em;}
-.cover-light .cover-svg-text{color:#0E0C07;}
-.cover-dark .cover-svg-text{color:#F7F4EE;}
-</style>
-</head>
-<body>
-
-<div class="cur" id="cur"></div>
-<div class="cur-ring" id="ring"></div>
-
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-brand">Tanuj Shori</a>
-  <div class="nav-links">
-    <a href="index.html" class="nav-a active">Home</a>
-    <a href="index.html#thinking" class="nav-a">Thinking</a>
-    <a href="index.html#journey" class="nav-a">Journey</a>
-    <a href="index.html#ecosystem" class="nav-a">Square Yards</a>
-    <a href="articles.html" class="nav-a">Articles</a>
-    <a href="media.html" class="nav-a">Media</a>
-    <a href="awards.html" class="nav-a">Awards</a>
-    <a href="index.html#connect" class="nav-a">Connect</a>
-  </div>
-  <div class="burger" id="burger"><span></span><span></span><span></span></div>
-</nav>
-
-<div class="mob-drawer" id="drawer">
-  <a href="index.html" class="mob-a">Home</a>
-  <a href="index.html#thinking" class="mob-a">Thinking</a>
-  <a href="index.html#journey" class="mob-a">Journey</a>
-  <a href="index.html#ecosystem" class="mob-a">Square Yards</a>
-  <a href="articles.html" class="mob-a">Articles</a>
-  <a href="media.html" class="mob-a">Media</a>
-  <a href="awards.html" class="mob-a">Awards</a>
-  <a href="index.html#connect" class="mob-a">Connect</a>
-</div>
-
-<!-- ── HERO ── -->
-<section class="hero" id="home">
-  <div class="hero-left">
-    <div class="hero-top">
-      <div class="h-eye rv"><div class="h-eye-line"></div><span class="h-eye-txt">Founder &amp; Chief Executive</span></div>
-      <div class="h-est rv d1">Est. 2013 &nbsp;·&nbsp; Gurugram &nbsp;·&nbsp; Dubai</div>
-      <h1 class="hero-h1 rv d2">
-        <span class="bl">India didn't need</span>
-        <span class="bl">another <em>broker.</em></span>
-        <span class="bl">It needed a</span>
-        <span class="bl">platform.</span>
-      </h1>
-      <p class="hero-desc rv d3">Built India's largest proptech from first principles — combining data intelligence, financial services, and global reach into one platform for the $800B Indian real estate market.</p>
-      <div class="hero-ctas rv d4">
-        <a href="#connect" class="btn-ink">Connect</a>
-        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="hero-yt">
-          <div class="yt-circle">↗</div>Watch on YouTube
-        </a>
-      </div>
-    </div>
-    <div class="hero-foot rv">
-      <div>
-        <div class="ped-label">Career Background</div>
-        <div class="ped-tags">
-          <span class="ped-tag">IIM Ahmedabad</span>
-          <span class="ped-tag">Standard Chartered</span>
-          <span class="ped-tag">Lehman Brothers</span>
-          <span class="ped-tag">Nomura</span>
-        </div>
-      </div>
-      <div class="scroll-cue">
-        <div class="scroll-pip"></div>
-        <span class="scroll-lbl">Scroll</span>
-      </div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <img src="tanuj.png" alt="Tanuj Shori on stage at a leadership summit">
-    <div class="hero-fade"></div>
-    <div class="hero-ghost">12</div>
-    <div class="hero-cap">Tanuj Shori<br>Leadership Summit · 2024<br>Founder &amp; CEO, Square Yards</div>
-  </div>
-</section>
-
-<!-- ── TICKER ── -->
-<div class="ticker">
-  <div class="ticker-track">
-    <div class="t-item"><span class="t-txt">Forbes India</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Business Leader of the Year</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">The Economic Times</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Financial Times Asia Pacific · #229</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Times of India</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Outlook Money</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Red Herring Top 100 Asia</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Entrepreneur of the Year · 2016</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Proptech Company of the Year · 2019</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Gulf Real Estate Awards</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Forbes India</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Business Leader of the Year</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">The Economic Times</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Financial Times Asia Pacific · #229</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Times of India</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Outlook Money</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Red Herring Top 100 Asia</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Entrepreneur of the Year · 2016</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Proptech Company of the Year · 2019</span><span class="t-dot"></span></div>
-    <div class="t-item"><span class="t-txt">Gulf Real Estate Awards</span><span class="t-dot"></span></div>
-  </div>
-</div>
-
-<!-- ── METRICS ── -->
-<div class="metrics" id="metrics">
-  <div class="met" data-w="92" data-target="1400" data-pre="₹" data-suf="Cr+"><div class="met-n">₹0<span class="g">Cr+</span></div><div class="met-l">Annual Revenue<br>FY 2024–25</div></div>
-  <div class="met" data-w="72" data-target="30" data-pre="" data-suf="+"><div class="met-n">0<span class="g">+</span></div><div class="met-l">Cities Across<br>India</div></div>
-  <div class="met" data-w="85" data-target="500" data-pre="" data-suf="+"><div class="met-n">0<span class="g">+</span></div><div class="met-l">Developer<br>Partners</div></div>
-  <div class="met" data-w="60" data-target="9" data-pre="" data-suf=" Countries"><div class="met-n">0<span class="g"> Countries</span></div><div class="met-l">Global<br>Footprint</div></div>
-</div>
-
-<!-- ── THINKING ── -->
-<section class="thinking" id="thinking">
-  <div class="eye rv"><div class="eye-line"></div><span class="eye-label">How Tanuj Thinks</span></div>
-  <div class="think-grid">
-    <div class="think-l rv">
-      <div class="think-q">"The Indian buyer never lacked <em>intent.</em><br>They lacked trustworthy <em>information.</em><br>That gap is a company."</div>
-      <div class="think-attr">— Tanuj Shori, Founder &amp; CEO</div>
-    </div>
-    <div class="think-div"></div>
-    <div class="think-r">
-      <a href="https://www.tanujshori.com/article/square-yards-continues-its-profitability-streak-over-rs-350-crores-revenue-for-financial-year-2025-quarter-3/" target="_blank" rel="noopener" class="w-item rv">
-        <div><div class="w-pub">Square Yards · Q3 FY25</div><div class="w-title">Why RERA created a market transformation — and what India still needs to finish the job</div></div>
-        <div style="display:flex;align-items:center;gap:10px;flex-shrink:0"><span class="w-yr">2025</span><span class="w-arr">↗</span></div>
-      </a>
-      <a href="https://www.tanujshori.com/article/market-boom-5-5-lakh-deals-worth-rs-4-trillion-prices-skyrocket-60-percent-in-5-years/" target="_blank" rel="noopener" class="w-item rv d1">
-        <div><div class="w-pub">Market Analysis</div><div class="w-title">5.5 lakh deals, ₹4 trillion in GTV — what India's property boom actually signals</div></div>
-        <div style="display:flex;align-items:center;gap:10px;flex-shrink:0"><span class="w-yr">2024</span><span class="w-arr">↗</span></div>
-      </a>
-      <a href="https://www.tanujshori.com/article/square-yards-posts-inr-261-revenue-registers-52-y-o-y-revenue-growth-in-q1-fy25/" target="_blank" rel="noopener" class="w-item rv d2">
-        <div><div class="w-pub">Outlook Money</div><div class="w-title">India's urbanisation wave and the mid-market opportunity most analysts are missing</div></div>
-        <div style="display:flex;align-items:center;gap:10px;flex-shrink:0"><span class="w-yr">2024</span><span class="w-arr">↗</span></div>
-      </a>
-      <a href="https://www.tanujshori.com/article/" target="_blank" rel="noopener" class="w-item rv d3">
-        <div><div class="w-pub">Economic Times</div><div class="w-title">The angel tax resolution and what it means for India's next generation of founders</div></div>
-        <div style="display:flex;align-items:center;gap:10px;flex-shrink:0"><span class="w-yr">2023</span><span class="w-arr">↗</span></div>
-      </a>
-      <a href="articles.html" class="think-cta rv">View all articles &nbsp;→</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── JOURNEY ── -->
-<section class="sec journey" id="journey">
-  <div class="eye rv"><div class="eye-line"></div><span class="eye-label">The Journey</span></div>
-  <div class="journey-inner">
-    <div class="rv">
-      <h2 class="j-h">Built from<br><em>conviction,</em><br>not capital.</h2>
-      <p class="j-body">Eight years studying how global capital moves through property markets before deciding to rewire how India transacts real estate entirely.</p>
-    </div>
-    <div class="timeline">
-      <div class="tl"><div class="tl-dot"></div><div><div class="tl-yr">2000 – 2005</div><div class="tl-title">IIM Ahmedabad</div><div class="tl-desc">Graduated with SEC, FSA, and Asian securities market certifications. Studied capital allocation mechanics and how assets are mispriced when information is opaque.</div></div></div>
-      <div class="tl"><div class="tl-dot"></div><div><div class="tl-yr">2005 – 2008</div><div class="tl-title">Standard Chartered · Lehman Brothers</div><div class="tl-desc">Capital markets across Asia Pacific. Witnessed how global institutions priced large-scale assets — and how much value is destroyed by information asymmetry.</div></div></div>
-      <div class="tl"><div class="tl-dot"></div><div><div class="tl-yr">2008 – 2013</div><div class="tl-title">Nomura Securities · Dubai</div><div class="tl-desc">Based in UAE, watching NRIs engage with Indian property. Recognised the broken information infrastructure as a solvable, scalable problem. The idea for Square Yards formed here.</div></div></div>
-      <div class="tl"><div class="tl-dot"></div><div><div class="tl-yr">2013</div><div class="tl-title">Founded Square Yards</div><div class="tl-desc">Launched from Gurugram with a global mandate from day one. The conviction: Indian real estate was a data and distribution problem wearing a brokerage costume.</div></div></div>
-      <div class="tl"><div class="tl-dot"></div><div><div class="tl-yr">2015 – 2020</div><div class="tl-title">International Expansion</div><div class="tl-desc">Scaled to 9 countries — Middle East, Australia, Canada, Southeast Asia. Built the NRI investment corridor competitors believed could not be systematised.</div></div></div>
-      <div class="tl"><div class="tl-dot"></div><div><div class="tl-yr">2022 – Present</div><div class="tl-title">Profitable at Scale</div><div class="tl-desc">₹1,400 Cr+ revenue with consistent EBITDA profitability — among the very few Indian startups to achieve significant scale and positive unit economics simultaneously.</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ECOSYSTEM ── -->
-<section class="ecosystem" id="ecosystem">
-  <div class="eco-head">
-    <div class="eye rv" style="margin-bottom:0"><div class="eye-line"></div><span class="eye-label">The Square Yards Ecosystem</span></div>
-    <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="eco-visit rv">Visit squareyards.com &nbsp;↗</a>
-  </div>
-  <div class="eco-grid">
-    <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="eco-card rv"><div class="eco-idx">01 <span class="eco-go">↗</span></div><div class="eco-name">Square Yards</div><div class="eco-tag">Primary Real Estate</div><div class="eco-desc">India's largest integrated real estate platform — search, discovery, transactions and post-sale services across 30+ cities and 9 countries.</div><div class="eco-stat">500<span>+</span> developer partners</div></a>
-    <a href="https://www.urbanmoney.com" target="_blank" rel="noopener" class="eco-card rv d1"><div class="eco-idx">02 <span class="eco-go">↗</span></div><div class="eco-name">Square Capital</div><div class="eco-tag">Financial Services · Urban Money</div><div class="eco-desc">One of India's largest secured mortgage marketplaces connecting borrowers to 90+ banks and NBFCs. Urban Money grew digital services 145% YoY.</div><div class="eco-stat">₹12,000<span>Cr+</span> disbursed</div></a>
-    <a href="https://www.azuro.in" target="_blank" rel="noopener" class="eco-card rv d2"><div class="eco-idx">03 <span class="eco-go">↗</span></div><div class="eco-name">Azuro</div><div class="eco-tag">Property Management</div><div class="eco-desc">India's largest professional property management company — rental management, tenant placement and upkeep for landlords across major metros.</div><div class="eco-stat">15,000<span>+</span> properties</div></a>
-  </div>
-</section>
-
-<!-- ── FEATURED ARTICLES ── -->
-<section class="featured-articles">
-  <div class="feat-header">
-    <div class="eye" style="margin-bottom:0"><div class="eye-line"></div><span class="eye-label">Featured Articles</span></div>
-    <a href="articles.html" class="feat-see-all rv">View all articles &nbsp;→</a>
-  </div>
-  <div class="card-grid">
-    <a href="https://www.tanujshori.com/article/square-yards-continues-its-profitability-streak-over-rs-350-crores-revenue-for-financial-year-2025-quarter-3/" target="_blank" rel="noopener" class="a-card rv">
-      <div class="a-card-img cover-1 cover-dark"><div class="cover-svg"><span class="cover-svg-text">₹350Cr+</span></div></div>
-      <div class="a-card-cat">Financial · Q3 FY25</div>
-      <div class="a-card-title">Square Yards Continues Its Profitability Streak: ₹350 Crores Revenue for Q3 FY25</div>
-      <div class="a-card-excerpt">EBITDA at ₹22Cr, gross profit ₹90Cr, 25% gross margin. The GTV growth story continues.</div>
-      <div class="a-card-meta"><span class="a-card-yr">2025</span><span class="a-card-arr">↗</span></div>
-    </a>
-    <a href="https://www.tanujshori.com/article/market-boom-5-5-lakh-deals-worth-rs-4-trillion-prices-skyrocket-60-percent-in-5-years/" target="_blank" rel="noopener" class="a-card rv d1">
-      <div class="a-card-img cover-2 cover-light"><div class="cover-svg"><span class="cover-svg-text">₹4T GTV</span></div></div>
-      <div class="a-card-cat">Market Analysis</div>
-      <div class="a-card-title">Market Boom: 5.5 Lakh Deals Worth ₹4 Trillion — Prices Up 60% in Five Years</div>
-      <div class="a-card-excerpt">Supply and demand converge as 300 million sq. ft. of developer pipeline readies for delivery.</div>
-      <div class="a-card-meta"><span class="a-card-yr">2024</span><span class="a-card-arr">↗</span></div>
-    </a>
-    <a href="https://www.tanujshori.com/article/square-yards-posts-inr-261-revenue-registers-52-y-o-y-revenue-growth-in-q1-fy25/" target="_blank" rel="noopener" class="a-card rv d2">
-      <div class="a-card-img cover-3 cover-dark"><div class="cover-svg"><span class="cover-svg-text">52% Growth</span></div></div>
-      <div class="a-card-cat">Quarterly Results</div>
-      <div class="a-card-title">Square Yards Posts ₹261 Cr Revenue — 52% YoY Revenue Growth in Q1 FY25</div>
-      <div class="a-card-excerpt">Digital services up 145%, financial services 61%, real estate services 48% year-on-year.</div>
-      <div class="a-card-meta"><span class="a-card-yr">2024</span><span class="a-card-arr">↗</span></div>
-    </a>
-  </div>
-</section>
-
-<!-- ── PRESS ── -->
-<section class="press-sec">
-  <div class="eye rv"><div class="eye-line"></div><span class="eye-label">Selected Press</span></div>
-  <div class="press-grid">
-    <div class="p-card rv"><div class="p-pub">Forbes India</div><div class="p-q">"A celebration of unparalleled entrepreneurship amidst the uncharted territory of India's real estate market."</div><div class="p-yr">Forbes India · 2023</div></div>
-    <div class="p-card rv d1"><div class="p-pub">Times of India</div><div class="p-q">"RERA is going to create a tsunami in Indian real estate. The mid-market segment will lead industry growth in the decade ahead."</div><div class="p-yr">Times of India · 2022</div></div>
-    <div class="p-card rv d2"><div class="p-pub">The Economic Times</div><div class="p-q">"The resolution of angel tax issues will foster an environment of positivity and growth for India's next generation of founders."</div><div class="p-yr">Economic Times · 2023</div></div>
-  </div>
-</section>
-
-<!-- ── CONNECT ── -->
-<section class="connect" id="connect">
-  <div class="c-inner">
-    <div class="c-eye rv">Connect</div>
-    <h2 class="c-h rv d1">The next decade<br>of Indian real estate<br>is being <em>written now.</em></h2>
-    <p class="c-sub rv d2">For investors, media inquiries, speaking engagements, and strategic partnerships.</p>
-    <div class="c-btns rv d3">
-      <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="c-btn-p">Connect on LinkedIn</a>
-      <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="c-btn-g">Watch on YouTube ↗</a>
-      <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="c-btn-g">Visit Square Yards ↗</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand-name">Tanuj Shori</div>
-      <div class="footer-brand-sub">Founder &amp; CEO · Square Yards</div>
-      <div class="footer-brand-desc">Built India's largest proptech platform from the conviction that real estate was a data problem — not a brokerage one. Operating across 9 countries with ₹1,400 Cr+ in annual revenue.</div>
-    </div>
-    <div>
-      <div class="footer-col-head">Navigate</div>
-      <div class="footer-col-links">
-        <a href="index.html" class="footer-col-a">Home</a>
-        <a href="index.html#thinking" class="footer-col-a">How Tanuj Thinks</a>
-        <a href="index.html#journey" class="footer-col-a">The Journey</a>
-        <a href="index.html#ecosystem" class="footer-col-a">Square Yards Ecosystem</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-head">Content</div>
-      <div class="footer-col-links">
-        <a href="articles.html" class="footer-col-a">Articles</a>
-        <a href="media.html" class="footer-col-a">Media Coverage</a>
-        <a href="awards.html" class="footer-col-a">Awards &amp; Recognition</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-head">Connect</div>
-      <div class="footer-col-links">
-        <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="footer-col-a">LinkedIn</a>
-        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="footer-col-a">YouTube</a>
-        <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Square Yards</a>
-        <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Urban Money</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2025 Tanuj Shori · Founder &amp; CEO, Square Yards Consulting Pvt. Ltd. · Dubai &amp; Gurugram</span>
-    <div class="footer-bottom-links">
-      <a href="articles.html" class="footer-bottom-a">Articles</a>
-      <a href="media.html" class="footer-bottom-a">Media</a>
-      <a href="awards.html" class="footer-bottom-a">Awards</a>
-    </div>
-  </div>
-</footer>
-
-<script src="shared.js"></script>
-<script>
-/* METRICS COUNTER */
-function easeOutExpo(t){return t>=1?1:1-Math.pow(2,-10*t);}
-function count(el,target,pre,suf,dur){
-  var g=el.querySelector('.g'),start=performance.now();
-  function step(now){
-    var p=Math.min((now-start)/dur,1),v=Math.round(easeOutExpo(p)*target);
-    el.childNodes[0].nodeValue=pre+v.toLocaleString();
-    if(g)g.textContent=suf;
-    if(p<1)requestAnimationFrame(step);else el.childNodes[0].nodeValue=pre+target.toLocaleString();
-  }
-  requestAnimationFrame(step);
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:66px;padding:0 var(--pad);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .3s,border-color .3s;
+  border-bottom:1px solid transparent;
 }
-var metDone=false;
-new IntersectionObserver(function(entries){
-  if(entries[0].isIntersecting&&!metDone){
-    metDone=true;
-    document.querySelectorAll('.met').forEach(function(m,i){
-      var n=m.querySelector('.met-n');
-      setTimeout(function(){
-        m.style.setProperty('--w',m.dataset.w+'%');
-        m.classList.add('go');
-        count(n,+m.dataset.target,m.dataset.pre,m.dataset.suf,1400+i*180);
-      },i*110);
-    });
-  }
-},{threshold:.3}).observe(document.getElementById('metrics'));
+.nav.scrolled{
+  background:rgba(247,244,238,.96);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom-color:var(--ink08);
+}
+.nav-brand{
+  font-family:var(--serif);font-size:18px;font-weight:700;
+  letter-spacing:0.04em;color:var(--ink);
+}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-a{
+  font-size:11px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;
+  color:var(--ink45);position:relative;transition:color .2s;
+}
+.nav-a::after{
+  content:'';position:absolute;bottom:-3px;left:0;right:0;
+  height:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;transition:transform .22s;
+}
+.nav-a:hover{color:var(--ink);}
+.nav-a:hover::after,
+.nav-a.active::after{transform:scaleX(1);}
+.nav-a.active{color:var(--ink);}
 
-/* TIMELINE */
-var tlObs=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');tlObs.unobserve(e.target);}});
-},{threshold:.2});
-document.querySelectorAll('.tl').forEach(function(el,i){el.style.transitionDelay=(i*.09)+'s';tlObs.observe(el);});
-</script>
-</body>
-</html>
+/* mobile */
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.burger span{display:block;width:22px;height:1.5px;background:var(--ink);border-radius:1px;transition:all .28s;}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mob-drawer{
+  position:fixed;top:66px;left:0;right:0;bottom:0;z-index:190;
+  background:rgba(247,244,238,.98);backdrop-filter:blur(20px);
+  padding:40px var(--pad);display:none;flex-direction:column;
+  transform:translateX(100%);transition:transform .32s cubic-bezier(.4,0,.2,1);
+}
+.mob-drawer.show{display:flex;}
+.mob-drawer.open{transform:translateX(0);}
+.mob-a{
+  font-family:var(--serif);font-size:26px;font-weight:500;
+  color:var(--ink45);padding:16px 0;border-bottom:1px solid var(--ink08);
+  transition:color .2s;
+}
+.mob-a:hover{color:var(--gold);}
+
+/* ── PAGE HEADER (sub-pages) ── */
+.page-header{
+  padding:140px var(--pad) 72px;
+  border-bottom:1px solid var(--ink08);
+  background:var(--parchment);
+}
+.page-header-eye{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.page-header-eye-line{width:28px;height:1px;background:var(--gold);}
+.page-header-eye-text{font-size:11px;font-weight:600;letter-spacing:.20em;text-transform:uppercase;color:var(--gold);}
+.page-header-h{
+  font-family:var(--serif);font-size:clamp(44px,5vw,72px);
+  font-weight:900;letter-spacing:-.022em;line-height:1.05;color:var(--ink);
+  margin-bottom:20px;
+}
+.page-header-h em{font-style:italic;font-weight:400;color:var(--gold);}
+.page-header-sub{font-size:15px;font-weight:400;line-height:1.75;color:var(--ink70);max-width:520px;}
+
+/* ── SECTION EYEBROW ── */
+.eye{display:flex;align-items:center;gap:14px;margin-bottom:32px;}
+.eye-line{width:28px;height:1px;background:var(--gold);}
+.eye-label{font-size:11px;font-weight:600;letter-spacing:.20em;text-transform:uppercase;color:var(--gold);}
+
+/* ── ARTICLE CARD ── */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+}
+.a-card{cursor:pointer;display:block;}
+.a-card-img{
+  width:100%;aspect-ratio:16/10;
+  overflow:hidden;position:relative;
+  background:var(--cream);
+  margin-bottom:18px;
+}
+.a-card-img img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  transition:transform .55s cubic-bezier(.16,1,.3,1);
+}
+.a-card:hover .a-card-img img{transform:scale(1.04);}
+.a-card-cat{
+  font-family:var(--mono);font-size:10px;font-weight:300;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:9px;
+}
+.a-card-title{
+  font-family:var(--serif);font-size:19px;font-weight:500;
+  color:var(--ink);line-height:1.42;margin-bottom:10px;
+  transition:color .2s;
+}
+.a-card:hover .a-card-title{color:var(--gold);}
+.a-card-excerpt{font-size:13px;font-weight:400;color:var(--ink45);line-height:1.72;}
+.a-card-meta{
+  display:flex;align-items:center;gap:10px;margin-top:14px;
+  padding-top:14px;border-top:1px solid var(--ink08);
+}
+.a-card-yr{font-family:var(--mono);font-size:10px;font-weight:300;color:var(--ink45);letter-spacing:.08em;}
+.a-card-arr{margin-left:auto;font-size:13px;color:var(--ink22);transition:transform .2s,color .2s;}
+.a-card:hover .a-card-arr{transform:translate(2px,-2px);color:var(--gold);}
+
+/* ── MEDIA CARD ── */
+.m-card{background:var(--warm-white);border:1px solid var(--ink08);padding:28px 26px;transition:background .25s,border-color .25s;}
+.m-card:hover{background:#fff;border-color:var(--gold-rule);}
+.m-card-pub{font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--ink);margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--ink08);}
+.m-card-q{font-family:var(--serif);font-size:15px;font-style:italic;font-weight:400;line-height:1.65;color:var(--ink);margin-bottom:14px;}
+.m-card-yr{font-family:var(--mono);font-size:9px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--ink45);}
+
+/* ── AWARD CARD ── */
+.aw-card{
+  border:1px solid var(--ink08);padding:24px 22px;
+  position:relative;background:var(--warm-white);
+  transition:border-color .25s,background .25s;overflow:hidden;
+}
+.aw-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:2px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .38s ease;
+}
+.aw-card:hover{border-color:rgba(181,136,31,.3);background:#fff;}
+.aw-card:hover::before{transform:scaleX(1);}
+.aw-yr{font-family:var(--mono);font-size:10px;font-weight:300;color:var(--gold);letter-spacing:.10em;margin-bottom:10px;}
+.aw-name{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink);line-height:1.32;margin-bottom:8px;}
+.aw-body{font-size:12px;font-weight:400;color:var(--ink70);line-height:1.72;}
+
+/* ── TICKER ── */
+.ticker{background:var(--ink);padding:11px 0;overflow:hidden;border-top:1px solid var(--gold-rule);border-bottom:1px solid var(--gold-rule);}
+.ticker-track{display:flex;width:max-content;animation:tick 44s linear infinite;}
+.ticker-track:hover{animation-play-state:paused;}
+@keyframes tick{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.t-item{display:flex;align-items:center;gap:20px;padding:0 26px;white-space:nowrap;}
+.t-txt{font-family:var(--serif);font-size:12px;font-style:italic;color:rgba(247,244,238,.52);letter-spacing:.03em;}
+.t-dot{width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:.65;flex-shrink:0;}
+
+/* ── FOOTER ── */
+.footer{background:var(--ink);padding:72px var(--pad) 0;}
+.footer-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap:48px;
+  padding-bottom:64px;
+  border-bottom:1px solid rgba(247,244,238,.08);
+}
+.footer-brand-name{
+  font-family:var(--serif);font-size:26px;font-weight:700;
+  color:rgba(247,244,238,.9);letter-spacing:.02em;
+  margin-bottom:6px;
+}
+.footer-brand-sub{
+  font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;
+}
+.footer-brand-desc{font-size:13px;font-weight:400;line-height:1.80;color:rgba(247,244,238,.42);}
+.footer-col-head{
+  font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(247,244,238,.3);margin-bottom:20px;
+}
+.footer-col-links{display:flex;flex-direction:column;gap:12px;}
+.footer-col-a{
+  font-size:13px;font-weight:400;color:rgba(247,244,238,.5);
+  transition:color .2s;
+}
+.footer-col-a:hover{color:var(--gold);}
+.footer-bottom{
+  padding:20px 0;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-family:var(--mono);font-size:10px;font-weight:300;letter-spacing:.08em;color:rgba(247,244,238,.22);}
+.footer-bottom-links{display:flex;gap:24px;}
+.footer-bottom-a{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,244,238,.22);transition:color .2s;}
+.footer-bottom-a:hover{color:var(--gold);}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.rv.vis{opacity:1;transform:translateY(0);}
+.rv.d1{transition-delay:.07s;}.rv.d2{transition-delay:.14s;}.rv.d3{transition-delay:.21s;}.rv.d4{transition-delay:.28s;}.rv.d5{transition-delay:.35s;}.rv.d6{transition-delay:.42s;}
+
+/* ── UTILS ── */
+.sec{padding:56px var(--pad);}
+.sep{width:100%;height:1px;background:var(--ink08);}
+.btn-ink{
+  display:inline-block;
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  padding:14px 34px;background:var(--ink);color:var(--parchment);
+  border:1.5px solid var(--ink);transition:background .22s,color .22s,border-color .22s;
+}
+.btn-ink:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+.btn-ghost{
+  display:inline-block;
+  font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  padding:14px 34px;background:transparent;color:var(--ink45);
+  border:1.5px solid var(--ink08);transition:color .22s,border-color .22s;
+}
+.btn-ghost:hover{color:var(--ink);border-color:var(--ink45);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  :root{--pad:32px;}
+  .card-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  :root{--pad:20px;}
+  .nav-links{display:none;}
+  .burger{display:flex;}
+  .card-grid{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;gap:36px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
+  .sec{padding:64px var(--pad);}
+}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none;}
+  .ticker-track{animation:none;}
+}
+
+/* Scroll pip */
+.scroll-pip{width:1px;height:44px;background:var(--ink08);position:relative;overflow:hidden;}
+.scroll-pip::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--gold);animation:pip 2.2s ease-in-out infinite;}
+@keyframes pip{0%{top:-100%;}100%{top:100%;}}

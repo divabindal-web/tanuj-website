@@ -115,7 +115,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;}
 .page-header-sub{font-size:15px;font-weight:400;line-height:1.75;color:var(--ink70);max-width:520px;}
 
 /* ── SECTION EYEBROW ── */
-.eye{display:flex;align-items:center;gap:14px;margin-bottom:52px;}
+.eye{display:flex;align-items:center;gap:14px;margin-bottom:32px;}
 .eye-line{width:28px;height:1px;background:var(--gold);}
 .eye-label{font-size:11px;font-weight:600;letter-spacing:.20em;text-transform:uppercase;color:var(--gold);}
 
@@ -236,7 +236,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;}
 .rv.d1{transition-delay:.07s;}.rv.d2{transition-delay:.14s;}.rv.d3{transition-delay:.21s;}.rv.d4{transition-delay:.28s;}.rv.d5{transition-delay:.35s;}.rv.d6{transition-delay:.42s;}
 
 /* ── UTILS ── */
-.sec{padding:88px var(--pad);}
+.sec{padding:56px var(--pad);}
 .sep{width:100%;height:1px;background:var(--ink08);}
 .btn-ink{
   display:inline-block;

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Awards & Recognition — Tanuj Shori</title>
+<meta name="description" content="Awards and recognition received by Tanuj Shori and Square Yards — from Entrepreneur of the Year to Proptech Company of the Year.">
+<link rel="stylesheet" href="shared.css">
+<style>
+.aw-hero{background:var(--ink);padding:36px var(--pad);border-bottom:1px solid var(--gold-rule);display:flex;align-items:center;gap:48px;flex-wrap:wrap;}
+.aw-stat{text-align:center;}
+.aw-stat-n{font-family:var(--mono);font-size:36px;font-weight:300;color:rgba(247,244,238,.7);letter-spacing:-.02em;line-height:1;}
+.aw-stat-n span{color:var(--gold);}
+.aw-stat-l{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,244,238,.28);margin-top:5px;}
+.aw-stat-sep{width:1px;height:52px;background:rgba(247,244,238,.08);}
+.timeline-awards{padding:72px var(--pad);display:flex;flex-direction:column;gap:0;}
+.tl-aw{display:grid;grid-template-columns:80px 1px 1fr;gap:0 36px;padding-bottom:0;opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+.tl-aw.vis{opacity:1;transform:translateY(0);}
+.tl-aw-yr{font-family:var(--mono);font-size:13px;font-weight:300;color:var(--gold);letter-spacing:.08em;padding-top:20px;text-align:right;}
+.tl-aw-line{background:var(--ink08);position:relative;}
+.tl-aw-line::before{content:'';position:absolute;top:22px;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:var(--parchment);border:2px solid var(--ink08);transition:border-color .3s,background .3s;}
+.tl-aw.vis .tl-aw-line::before{border-color:var(--gold);background:var(--gold-light);}
+.tl-aw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink08);border:1px solid var(--ink08);margin-bottom:1px;}
+.tl-aw-card{background:var(--parchment);padding:22px 20px;transition:background .25s;position:relative;overflow:hidden;}
+.tl-aw-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .36s ease;}
+.tl-aw-card:hover{background:var(--warm-white);}
+.tl-aw-card:hover::before{transform:scaleX(1);}
+.tl-aw-name{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:7px;}
+.tl-aw-body{font-size:12px;font-weight:400;color:var(--ink70);line-height:1.68;}
+.tl-aw-yr-col{display:flex;align-items:flex-start;padding-top:20px;}
+@media(max-width:900px){
+  .tl-aw{grid-template-columns:60px 1px 1fr;gap:0 18px;}
+  .tl-aw-cards{grid-template-columns:1fr;}
+  .aw-hero{gap:28px;}
+}
+</style>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="ring"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">Tanuj Shori</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-a">Home</a>
+    <a href="index.html#thinking" class="nav-a">Thinking</a>
+    <a href="index.html#journey" class="nav-a">Journey</a>
+    <a href="index.html#ecosystem" class="nav-a">Square Yards</a>
+    <a href="articles.html" class="nav-a">Articles</a>
+    <a href="media.html" class="nav-a">Media</a>
+    <a href="awards.html" class="nav-a active">Awards</a>
+    <a href="index.html#connect" class="nav-a">Connect</a>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-drawer" id="drawer">
+  <a href="index.html" class="mob-a">Home</a>
+  <a href="articles.html" class="mob-a">Articles</a>
+  <a href="media.html" class="mob-a">Media</a>
+  <a href="awards.html" class="mob-a">Awards</a>
+  <a href="index.html#connect" class="mob-a">Connect</a>
+</div>
+
+<div class="page-header">
+  <div class="page-header-eye rv"><div class="page-header-eye-line"></div><span class="page-header-eye-text">Recognition</span></div>
+  <h1 class="page-header-h rv d1">Awards &amp; <em>Milestones</em></h1>
+  <p class="page-header-sub rv d2">Recognition from India's most prestigious business institutions — spanning proptech, real estate, entrepreneurship, and high-growth company rankings.</p>
+</div>
+
+<div class="aw-hero">
+  <div class="aw-stat"><div class="aw-stat-n">12<span>+</span></div><div class="aw-stat-l">Awards Won</div></div>
+  <div class="aw-stat-sep"></div>
+  <div class="aw-stat"><div class="aw-stat-n">9</div><div class="aw-stat-l">Years of Recognition</div></div>
+  <div class="aw-stat-sep"></div>
+  <div class="aw-stat"><div class="aw-stat-n">5</div><div class="aw-stat-l">National Awards</div></div>
+  <div class="aw-stat-sep"></div>
+  <div class="aw-stat"><div class="aw-stat-n">3</div><div class="aw-stat-l">International Awards</div></div>
+</div>
+
+<div class="timeline-awards">
+
+  <div class="tl-aw">
+    <div class="tl-aw-yr">2023</div>
+    <div class="tl-aw-line"></div>
+    <div>
+      <div class="tl-aw-cards">
+        <div class="tl-aw-card"><div class="tl-aw-name">Business Leader of the Year</div><div class="tl-aw-body">Recognised for outstanding leadership and impact in India's real estate and proptech sector — building one of the subcontinent's most consequential platforms.</div></div>
+        <div class="tl-aw-card"><div class="tl-aw-name">ET Growth Champions</div><div class="tl-aw-body">Economic Times recognised Square Yards among India's fastest-growing companies — third consecutive year of inclusion in the prestigious annual ranking.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-aw">
+    <div class="tl-aw-yr">2021</div>
+    <div class="tl-aw-line"></div>
+    <div>
+      <div class="tl-aw-cards">
+        <div class="tl-aw-card"><div class="tl-aw-name">Financial Times Asia Pacific High-Growth Companies — #229</div><div class="tl-aw-body">Square Yards ranked #229 in the Financial Times' definitive list of Asia Pacific's fastest-growing companies, recording 205.6% absolute revenue growth.</div></div>
+        <div class="tl-aw-card"><div class="tl-aw-name">ET Growth Champions 2021</div><div class="tl-aw-body">Economic Times and Statista's second edition — ranking highlights companies that demonstrate exceptional growth and value creation in the Indian market.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-aw">
+    <div class="tl-aw-yr">2019</div>
+    <div class="tl-aw-line"></div>
+    <div>
+      <div class="tl-aw-cards">
+        <div class="tl-aw-card"><div class="tl-aw-name">Red Herring Top 100 Asia</div><div class="tl-aw-body">Square Yards recognised among the most promising private technology ventures across Asia — a benchmark list for identifying companies that will define the next era of technology.</div></div>
+        <div class="tl-aw-card"><div class="tl-aw-name">Proptech Company of the Year</div><div class="tl-aw-body">India Property Awards 2019 — conferred by the International Business Magazine for innovation in proptech and transformational impact on the Indian real estate sector.</div></div>
+        <div class="tl-aw-card"><div class="tl-aw-name">Best Real Estate Digital Agency</div><div class="tl-aw-body">4th Golden Brick Awards — Best Real Estate Digital Agency of the Year (National) — recognising Square Yards' digital-first approach in an industry built on relationships.</div></div>
+      </div>
+      <div class="tl-aw-cards" style="margin-top:1px">
+        <div class="tl-aw-card"><div class="tl-aw-name">Real Estate Website of the Year</div><div class="tl-aw-body">11th Realty+ Conclave &amp; Excellence Awards — squareyards.com recognised as India's best real estate website for design, UX, and transaction infrastructure.</div></div>
+        <div class="tl-aw-card"><div class="tl-aw-name">Gulf Real Estate Awards</div><div class="tl-aw-body">Recognised for building the most effective NRI-to-India real estate investment corridor — connecting Gulf-based buyers to verified Indian developers at scale.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-aw">
+    <div class="tl-aw-yr">2016</div>
+    <div class="tl-aw-line"></div>
+    <div>
+      <div class="tl-aw-cards">
+        <div class="tl-aw-card"><div class="tl-aw-name">Entrepreneur of the Year — Real Estate</div><div class="tl-aw-body">Entrepreneur India Awards 2016 — Entrepreneur of the Year in the Real Estate category. Recognised just three years after founding Square Yards, as the company proved its model worked at scale.</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Tanuj Shori</div>
+      <div class="footer-brand-sub">Founder &amp; CEO · Square Yards</div>
+      <div class="footer-brand-desc">Built India's largest proptech platform from the conviction that real estate was a data problem — not a brokerage one. ₹1,400 Cr+ revenue across 9 countries.</div>
+    </div>
+    <div>
+      <div class="footer-col-head">Navigate</div>
+      <div class="footer-col-links">
+        <a href="index.html" class="footer-col-a">Home</a>
+        <a href="index.html#thinking" class="footer-col-a">How Tanuj Thinks</a>
+        <a href="index.html#journey" class="footer-col-a">The Journey</a>
+        <a href="index.html#ecosystem" class="footer-col-a">Square Yards Ecosystem</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Content</div>
+      <div class="footer-col-links">
+        <a href="articles.html" class="footer-col-a">Articles</a>
+        <a href="media.html" class="footer-col-a">Media Coverage</a>
+        <a href="awards.html" class="footer-col-a">Awards &amp; Recognition</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Connect</div>
+      <div class="footer-col-links">
+        <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="footer-col-a">LinkedIn</a>
+        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="footer-col-a">YouTube</a>
+        <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Square Yards</a>
+        <a href="index.html#connect" class="footer-col-a">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Tanuj Shori · Founder &amp; CEO, Square Yards · Dubai &amp; Gurugram</span>
+    <div class="footer-bottom-links">
+      <a href="articles.html" class="footer-bottom-a">Articles</a>
+      <a href="media.html" class="footer-bottom-a">Media</a>
+      <a href="awards.html" class="footer-bottom-a">Awards</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+var tlObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');tlObs.unobserve(e.target);}});
+},{threshold:.15});
+document.querySelectorAll('.tl-aw').forEach(function(el,i){el.style.transitionDelay=(i*.12)+'s';tlObs.observe(el);});
+</script>
+</body>
+</html>

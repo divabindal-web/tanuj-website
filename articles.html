@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Articles — Tanuj Shori</title>
+<meta name="description" content="Writing and thinking by Tanuj Shori, Founder and CEO of Square Yards, on Indian real estate, proptech, and building at scale.">
+<link rel="stylesheet" href="shared.css">
+<style>
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:72px var(--pad);}
+.a-card-img{background:var(--cream);}
+.featured-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ink08);border:1px solid var(--ink08);margin:0 var(--pad) 56px;}
+.feat-big{grid-row:span 2;background:var(--parchment);position:relative;overflow:hidden;min-height:480px;display:flex;flex-direction:column;justify-content:flex-end;padding:36px;}
+.feat-big-img{position:absolute;inset:0;overflow:hidden;}
+.feat-big-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.16,1,.3,1);}
+.feat-big:hover .feat-big-img img{transform:scale(1.04);}
+.feat-big-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,7,.78) 0%,rgba(14,12,7,.12) 60%,transparent 100%);}
+.feat-big-content{position:relative;z-index:1;}
+.feat-big-cat{font-family:var(--mono);font-size:10px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.feat-big-title{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);font-weight:600;color:#F7F4EE;line-height:1.35;margin-bottom:10px;}
+.feat-big-yr{font-family:var(--mono);font-size:10px;font-weight:300;color:rgba(247,244,238,.4);letter-spacing:.08em;}
+.feat-sm{background:var(--parchment);padding:28px;display:flex;flex-direction:column;justify-content:flex-end;min-height:220px;position:relative;overflow:hidden;transition:background .25s;}
+.feat-sm:hover{background:var(--warm-white);}
+.feat-sm-cat{font-family:var(--mono);font-size:10px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.feat-sm-title{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:8px;transition:color .2s;}
+.feat-sm:hover .feat-sm-title{color:var(--gold);}
+.feat-sm-yr{font-family:var(--mono);font-size:10px;color:var(--ink45);}
+.filter-bar{display:flex;align-items:center;gap:0;padding:0 var(--pad);border-bottom:1px solid var(--ink08);}
+.filter-btn{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink45);padding:16px 22px;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s;cursor:pointer;background:none;border-left:none;border-right:none;border-top:none;}
+.filter-btn.on{color:var(--ink);border-bottom-color:var(--gold);}
+.filter-btn:hover{color:var(--ink);}
+@media(max-width:900px){
+  .featured-row{grid-template-columns:1fr;}
+  .feat-big{grid-row:span 1;min-height:340px;}
+  .articles-grid{grid-template-columns:1fr;padding:48px var(--pad);}
+}
+.cover-1{background:#1A1710;}.cover-2{background:#E8E3D8;}.cover-3{background:#1E160A;}
+.cover-4{background:#EDE9DF;}.cover-5{background:#0E0C07;}.cover-6{background:#E5E0D4;}
+.cover-7{background:#241C0A;}.cover-8{background:#F0EBE0;}.cover-9{background:#130F06;}
+.svg-overlay{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:absolute;inset:0;}
+.svg-txt{font-family:'Playfair Display',serif;font-size:52px;font-style:italic;font-weight:400;opacity:.14;letter-spacing:-.02em;}
+.svg-dark .svg-txt{color:#0E0C07;}.svg-light .svg-txt{color:#F7F4EE;}
+</style>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="ring"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">Tanuj Shori</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-a">Home</a>
+    <a href="index.html#thinking" class="nav-a">Thinking</a>
+    <a href="index.html#journey" class="nav-a">Journey</a>
+    <a href="index.html#ecosystem" class="nav-a">Square Yards</a>
+    <a href="articles.html" class="nav-a active">Articles</a>
+    <a href="media.html" class="nav-a">Media</a>
+    <a href="awards.html" class="nav-a">Awards</a>
+    <a href="index.html#connect" class="nav-a">Connect</a>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-drawer" id="drawer">
+  <a href="index.html" class="mob-a">Home</a>
+  <a href="index.html#thinking" class="mob-a">Thinking</a>
+  <a href="index.html#journey" class="mob-a">Journey</a>
+  <a href="articles.html" class="mob-a">Articles</a>
+  <a href="media.html" class="mob-a">Media</a>
+  <a href="awards.html" class="mob-a">Awards</a>
+  <a href="index.html#connect" class="mob-a">Connect</a>
+</div>
+
+<div class="page-header">
+  <div class="page-header-eye rv"><div class="page-header-eye-line"></div><span class="page-header-eye-text">Writing</span></div>
+  <h1 class="page-header-h rv d1">Articles &amp; <em>Perspectives</em></h1>
+  <p class="page-header-sub rv d2">Analysis of Indian real estate, proptech, capital markets, and the business of building at scale — written by Tanuj Shori.</p>
+</div>
+
+<!-- FEATURED EDITORIAL LAYOUT -->
+<div class="featured-row">
+  <a href="https://www.tanujshori.com/article/square-yards-continues-its-profitability-streak-over-rs-350-crores-revenue-for-financial-year-2025-quarter-3/" target="_blank" rel="noopener" class="feat-big">
+    <div class="feat-big-img cover-1"><div class="svg-overlay svg-light"><span class="svg-txt">₹350Cr+</span></div></div>
+    <div class="feat-big-overlay"></div>
+    <div class="feat-big-content">
+      <div class="feat-big-cat">Financial Update · Q3 FY25</div>
+      <div class="feat-big-title">Square Yards Continues Its Profitability Streak: Over ₹350 Crores Revenue for Financial Year 2025 Quarter 3</div>
+      <div class="feat-big-yr">2025</div>
+    </div>
+  </a>
+  <a href="https://www.tanujshori.com/article/market-boom-5-5-lakh-deals-worth-rs-4-trillion-prices-skyrocket-60-percent-in-5-years/" target="_blank" rel="noopener" class="feat-sm">
+    <div class="feat-sm-cat">Market Analysis</div>
+    <div class="feat-sm-title">Market Boom: 5.5 Lakh Deals Worth ₹4 Trillion — Prices Up 60% in Five Years</div>
+    <div class="feat-sm-yr">2024</div>
+  </a>
+  <a href="https://www.tanujshori.com/article/square-yards-posts-inr-261-revenue-registers-52-y-o-y-revenue-growth-in-q1-fy25/" target="_blank" rel="noopener" class="feat-sm">
+    <div class="feat-sm-cat">Quarterly Results · Q1 FY25</div>
+    <div class="feat-sm-title">Square Yards Posts ₹261 Cr Revenue — 52% YoY Revenue Growth</div>
+    <div class="feat-sm-yr">2024</div>
+  </a>
+</div>
+
+<!-- ALL ARTICLES GRID -->
+<div class="filter-bar">
+  <button class="filter-btn on" data-f="all">All</button>
+  <button class="filter-btn" data-f="financial">Financial</button>
+  <button class="filter-btn" data-f="market">Market</button>
+  <button class="filter-btn" data-f="product">Product</button>
+</div>
+
+<div class="articles-grid">
+  <a href="https://www.tanujshori.com/article/a-blockbuster-q3-fy24-for-square-yards-with-53-of-yoy-revenue-growth/" target="_blank" rel="noopener" class="a-card rv" data-cat="financial">
+    <div class="a-card-img cover-4 cover-light" style="position:relative"><div class="svg-overlay svg-dark"><span class="svg-txt">53%</span></div></div>
+    <div class="a-card-cat">Financial · Q3 FY24</div>
+    <div class="a-card-title">A Blockbuster Q3 FY24 for Square Yards with 53% YoY Revenue Growth</div>
+    <div class="a-card-excerpt">Financial services posted 2x growth run rate, touching USD $300M in disbursements.</div>
+    <div class="a-card-meta"><span class="a-card-yr">2024</span><span class="a-card-arr">↗</span></div>
+  </a>
+  <a href="https://www.tanujshori.com/article/square-yards-posts-stellar-revenue-feat-for-fy2022-23/" target="_blank" rel="noopener" class="a-card rv d1" data-cat="financial">
+    <div class="a-card-img cover-5 cover-dark" style="position:relative"><div class="svg-overlay svg-light"><span class="svg-txt">FY23</span></div></div>
+    <div class="a-card-cat">Annual Review · FY23</div>
+    <div class="a-card-title">Square Yards Posts Stellar Revenue Feat for FY 2022–23</div>
+    <div class="a-card-excerpt">$125M raised in total funding — $65M debt capital and $60M equity. Profitability in sight.</div>
+    <div class="a-card-meta"><span class="a-card-yr">2023</span><span class="a-card-arr">↗</span></div>
+  </a>
+  <a href="https://www.tanujshori.com/article/azuro-by-square-yards-achieves-huge-milestone-for-its-property-management-business/" target="_blank" rel="noopener" class="a-card rv d2" data-cat="product">
+    <div class="a-card-img cover-6 cover-light" style="position:relative"><div class="svg-overlay svg-dark"><span class="svg-txt">Azuro</span></div></div>
+    <div class="a-card-cat">Product · Azuro</div>
+    <div class="a-card-title">Azuro by Square Yards Achieves Major Milestone in Property Management</div>
+    <div class="a-card-excerpt">Leveraging increasing demand while growing its share in India's property management market.</div>
+    <div class="a-card-meta"><span class="a-card-yr">2022</span><span class="a-card-arr">↗</span></div>
+  </a>
+  <a href="https://www.tanujshori.com/article/square-yards-gets-into-fractional-ownership-category-with-new-venture/" target="_blank" rel="noopener" class="a-card rv" data-cat="product">
+    <div class="a-card-img cover-7 cover-dark" style="position:relative"><div class="svg-overlay svg-light"><span class="svg-txt">PropsAMC</span></div></div>
+    <div class="a-card-cat">New Ventures · PropsAMC</div>
+    <div class="a-card-title">Square Yards Enters Fractional Ownership Category with PropsAMC</div>
+    <div class="a-card-excerpt">Data intelligence and asset management division raises capital for Grade-A commercial property.</div>
+    <div class="a-card-meta"><span class="a-card-yr">2022</span><span class="a-card-arr">↗</span></div>
+  </a>
+  <a href="https://www.tanujshori.com/article/an-innovative-ai-based-marketing-and-sales-platform-from-square-yards/" target="_blank" rel="noopener" class="a-card rv d1" data-cat="product">
+    <div class="a-card-img cover-8 cover-light" style="position:relative"><div class="svg-overlay svg-dark"><span class="svg-txt">AI</span></div></div>
+    <div class="a-card-cat">Technology · SmartAgent</div>
+    <div class="a-card-title">SmartAgent: An AI-Based Marketing and Sales Platform for Real Estate Agents</div>
+    <div class="a-card-excerpt">Launched for UAE's real estate agencies — AI-powered sales and marketing solutions at scale.</div>
+    <div class="a-card-meta"><span class="a-card-yr">2023</span><span class="a-card-arr">↗</span></div>
+  </a>
+  <a href="https://www.tanujshori.com/article/square-yards-the-team-no-1-in-the-real-estate-market-with-20-co-founders/" target="_blank" rel="noopener" class="a-card rv d2" data-cat="market">
+    <div class="a-card-img cover-9 cover-dark" style="position:relative"><div class="svg-overlay svg-light"><span class="svg-txt">Team</span></div></div>
+    <div class="a-card-cat">Company · Culture</div>
+    <div class="a-card-title">Square Yards — The Team Number One in Real Estate with 20 Co-Founders</div>
+    <div class="a-card-excerpt">How building a co-founder culture from the start created India's most resilient proptech team.</div>
+    <div class="a-card-meta"><span class="a-card-yr">2022</span><span class="a-card-arr">↗</span></div>
+  </a>
+</div>
+
+<div style="text-align:center;padding:0 var(--pad) 72px;">
+  <a href="https://www.tanujshori.com/article/" target="_blank" rel="noopener" class="btn-ink rv">View All Articles on tanujshori.com ↗</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Tanuj Shori</div>
+      <div class="footer-brand-sub">Founder &amp; CEO · Square Yards</div>
+      <div class="footer-brand-desc">Built India's largest proptech platform from the conviction that real estate was a data problem — not a brokerage one. ₹1,400 Cr+ revenue across 9 countries.</div>
+    </div>
+    <div>
+      <div class="footer-col-head">Navigate</div>
+      <div class="footer-col-links">
+        <a href="index.html" class="footer-col-a">Home</a>
+        <a href="index.html#thinking" class="footer-col-a">How Tanuj Thinks</a>
+        <a href="index.html#journey" class="footer-col-a">The Journey</a>
+        <a href="index.html#ecosystem" class="footer-col-a">Square Yards Ecosystem</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Content</div>
+      <div class="footer-col-links">
+        <a href="articles.html" class="footer-col-a">Articles</a>
+        <a href="media.html" class="footer-col-a">Media Coverage</a>
+        <a href="awards.html" class="footer-col-a">Awards &amp; Recognition</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Connect</div>
+      <div class="footer-col-links">
+        <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="footer-col-a">LinkedIn</a>
+        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="footer-col-a">YouTube</a>
+        <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Square Yards</a>
+        <a href="index.html#connect" class="footer-col-a">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Tanuj Shori · Founder &amp; CEO, Square Yards · Dubai &amp; Gurugram</span>
+    <div class="footer-bottom-links">
+      <a href="articles.html" class="footer-bottom-a">Articles</a>
+      <a href="media.html" class="footer-bottom-a">Media</a>
+      <a href="awards.html" class="footer-bottom-a">Awards</a>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+/* filter */
+document.querySelectorAll('.filter-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('on');});
+    btn.classList.add('on');
+    var f=btn.dataset.f;
+    document.querySelectorAll('.a-card').forEach(function(c){
+      c.style.display=(f==='all'||c.dataset.cat===f)?'block':'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

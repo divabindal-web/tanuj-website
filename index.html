@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 <link rel="stylesheet" href="shared.css">
 <style>
 /* ── INDEX-ONLY STYLES ── */
-
+ 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 500px;position:relative;overflow:hidden;border-bottom:1px solid var(--ink08);}
 .hero-left{padding:136px var(--pad) 72px;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:2;}
@@ -41,7 +42,7 @@
 .hero-fade{position:absolute;inset:0;background:linear-gradient(to right,var(--parchment) 0%,transparent 15%);}
 .hero-cap{position:absolute;bottom:24px;right:22px;font-family:var(--mono);font-size:9px;font-weight:300;color:rgba(14,12,7,.38);letter-spacing:.12em;text-align:right;line-height:1.8;}
 .hero-ghost{position:absolute;top:50%;right:16px;font-family:var(--serif);font-size:220px;font-weight:900;color:rgba(14,12,7,.025);line-height:1;transform:translateY(-50%);user-select:none;pointer-events:none;}
-
+ 
 /* METRICS */
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--ink08);}
 .met{padding:40px 32px;border-right:1px solid var(--ink08);position:relative;overflow:hidden;}
@@ -51,15 +52,15 @@
 .met-n{font-family:var(--mono);font-size:38px;font-weight:300;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-bottom:10px;}
 .met-n .g{color:var(--gold);}
 .met-l{font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--ink45);line-height:1.6;}
-
+ 
 /* THINKING (dark) */
 .thinking{background:var(--ink);color:var(--parchment);padding:96px var(--pad);position:relative;overflow:hidden;}
 .thinking::before{content:'THINK';position:absolute;right:-20px;top:50%;font-family:var(--serif);font-size:260px;font-weight:900;color:rgba(247,244,238,.022);line-height:1;transform:translateY(-50%);pointer-events:none;user-select:none;}
 .thinking .eye-label{color:var(--gold);}
-.think-grid{display:grid;grid-template-columns:1fr 1px 1fr;align-items:start;}
+.think-grid{display:grid;grid-template-columns:1fr 1px 1fr;align-items:start;max-width:1000px;}
 .think-div{background:rgba(247,244,238,.07);}
-.think-l{padding-right:72px;}
-.think-r{padding-left:72px;}
+.think-l{padding-right:48px;}
+.think-r{padding-left:48px;}
 .think-q{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:400;font-style:italic;line-height:1.42;color:var(--parchment);margin-bottom:26px;}
 .think-q em{font-style:normal;font-weight:700;color:var(--gold);}
 .think-attr{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,238,.3);}
@@ -74,7 +75,7 @@
 .w-arr{font-size:14px;color:rgba(247,244,238,.22);flex-shrink:0;transition:color .2s,transform .2s;}
 .think-cta{margin-top:32px;display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,238,.35);transition:color .2s;}
 .think-cta:hover{color:var(--gold);}
-
+ 
 /* JOURNEY */
 .journey{background:var(--parchment);}
 .journey-inner{display:grid;grid-template-columns:200px 380px;gap:40px;align-items:start;}
@@ -90,7 +91,7 @@
 .tl-yr{font-family:var(--mono);font-size:9px;font-weight:400;color:var(--gold);letter-spacing:.10em;margin-bottom:4px;}
 .tl-title{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.25;}
 .tl-desc{font-size:12px;font-weight:400;line-height:1.7;color:var(--ink70);max-width:340px;}
-
+ 
 /* ECOSYSTEM */
 .ecosystem{background:var(--cream);padding:80px var(--pad);}
 .eco-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;}
@@ -111,7 +112,7 @@
 .eco-desc{font-size:12px;font-weight:400;line-height:1.7;color:var(--ink70);margin-bottom:14px;}
 .eco-stat{font-family:var(--mono);font-size:18px;font-weight:300;color:var(--ink);letter-spacing:-.02em;}
 .eco-stat span{color:var(--gold);}
-
+ 
 /* FEATURED articles preview on homepage — COMPACT */
 .featured-articles{background:var(--parchment);padding:64px var(--pad);}
 .featured-articles .card-grid{gap:20px;max-width:820px;}
@@ -126,7 +127,7 @@
 .feat-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;}
 .feat-see-all{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink45);display:flex;align-items:center;gap:8px;transition:color .2s;}
 .feat-see-all:hover{color:var(--gold);}
-
+ 
 /* PRESS */
 .press-sec{background:var(--cream);padding:88px var(--pad);}
 .press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink08);border:1px solid var(--ink08);margin-top:52px;}
@@ -135,7 +136,7 @@
 .p-pub{font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--ink);margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--ink08);}
 .p-q{font-family:var(--serif);font-size:15px;font-style:italic;font-weight:400;line-height:1.62;color:var(--ink);margin-bottom:14px;}
 .p-yr{font-family:var(--mono);font-size:9px;font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:var(--ink45);}
-
+ 
 /* CONNECT */
 .connect{background:var(--ink);padding:120px var(--pad);text-align:center;position:relative;overflow:hidden;}
 .connect::before,.connect::after{content:'';position:absolute;top:50%;left:50%;border-radius:50%;border:1px solid rgba(181,136,31,.06);transform:translate(-50%,-50%);pointer-events:none;}
@@ -151,7 +152,7 @@
 .c-btn-p:hover{background:transparent;color:var(--gold);}
 .c-btn-g{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(247,244,238,.32);display:inline-flex;align-items:center;gap:6px;transition:color .2s;}
 .c-btn-g:hover{color:rgba(247,244,238,.7);}
-
+ 
 /* responsive */
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;}
@@ -169,7 +170,7 @@
   .eco-grid{grid-template-columns:1fr;}
   .press-grid{grid-template-columns:1fr;}
 }
-
+ 
 /* Image placeholder SVG covers for articles */
 .cover-1{background:linear-gradient(135deg,#1a1710 0%,#2d2618 60%,#1a1710 100%);}
 .cover-2{background:linear-gradient(135deg,#E8E3D8 0%,#D4CDB8 60%,#C8BFA8 100%);}
@@ -177,7 +178,7 @@
 .cover-4{background:linear-gradient(135deg,#EDE9DF 0%,#DDD7CA 60%,#CFC8B8 100%);}
 .cover-5{background:linear-gradient(135deg,#0E0C07 0%,#201A0A 60%,#2E260E 100%);}
 .cover-6{background:linear-gradient(135deg,#E5E0D4 0%,#D8D1C1 60%,#C8BFA8 100%);}
-
+ 
 .cover-svg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
 .cover-svg-text{font-family:'Playfair Display',serif;font-size:42px;font-style:italic;font-weight:400;opacity:.18;letter-spacing:-.02em;}
 .cover-light .cover-svg-text{color:#0E0C07;}
@@ -185,10 +186,10 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="cur" id="cur"></div>
 <div class="cur-ring" id="ring"></div>
-
+ 
 <nav class="nav" id="nav">
   <a href="index.html" class="nav-brand">Tanuj Shori</a>
   <div class="nav-links">
@@ -203,7 +204,7 @@
   </div>
   <div class="burger" id="burger"><span></span><span></span><span></span></div>
 </nav>
-
+ 
 <div class="mob-drawer" id="drawer">
   <a href="index.html" class="mob-a">Home</a>
   <a href="index.html#thinking" class="mob-a">Thinking</a>
@@ -214,7 +215,7 @@
   <a href="awards.html" class="mob-a">Awards</a>
   <a href="index.html#connect" class="mob-a">Connect</a>
 </div>
-
+ 
 <!-- ── HERO ── -->
 <section class="hero" id="home">
   <div class="hero-left">
@@ -258,7 +259,7 @@
     <div class="hero-cap">Tanuj Shori<br>Leadership Summit · 2024<br>Founder &amp; CEO, Square Yards</div>
   </div>
 </section>
-
+ 
 <!-- ── TICKER ── -->
 <div class="ticker">
   <div class="ticker-track">
@@ -284,7 +285,7 @@
     <div class="t-item"><span class="t-txt">Gulf Real Estate Awards</span><span class="t-dot"></span></div>
   </div>
 </div>
-
+ 
 <!-- ── METRICS ── -->
 <div class="metrics" id="metrics">
   <div class="met" data-w="92" data-target="1400" data-pre="₹" data-suf="Cr+"><div class="met-n">₹0<span class="g">Cr+</span></div><div class="met-l">Annual Revenue<br>FY 2024–25</div></div>
@@ -292,7 +293,7 @@
   <div class="met" data-w="85" data-target="500" data-pre="" data-suf="+"><div class="met-n">0<span class="g">+</span></div><div class="met-l">Developer<br>Partners</div></div>
   <div class="met" data-w="60" data-target="9" data-pre="" data-suf=" Countries"><div class="met-n">0<span class="g"> Countries</span></div><div class="met-l">Global<br>Footprint</div></div>
 </div>
-
+ 
 <!-- ── THINKING ── -->
 <section class="thinking" id="thinking">
   <div class="eye rv"><div class="eye-line"></div><span class="eye-label">How Tanuj Thinks</span></div>
@@ -323,7 +324,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── JOURNEY ── -->
 <section class="sec journey" id="journey">
   <div class="eye rv"><div class="eye-line"></div><span class="eye-label">The Journey</span></div>
@@ -342,7 +343,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── ECOSYSTEM ── -->
 <section class="ecosystem" id="ecosystem">
   <div class="eco-head">
@@ -355,7 +356,7 @@
     <a href="https://www.azuro.in" target="_blank" rel="noopener" class="eco-card rv d2"><div class="eco-idx">03 <span class="eco-go">↗</span></div><div class="eco-name">Azuro</div><div class="eco-tag">Property Management</div><div class="eco-desc">India's largest professional property management company — rental management, tenant placement and upkeep for landlords across major metros.</div><div class="eco-stat">15,000<span>+</span> properties</div></a>
   </div>
 </section>
-
+ 
 <!-- ── FEATURED ARTICLES ── -->
 <section class="featured-articles">
   <div class="feat-header">
@@ -386,7 +387,7 @@
     </a>
   </div>
 </section>
-
+ 
 <!-- ── PRESS ── -->
 <section class="press-sec">
   <div class="eye rv"><div class="eye-line"></div><span class="eye-label">Selected Press</span></div>
@@ -396,7 +397,7 @@
     <div class="p-card rv d2"><div class="p-pub">The Economic Times</div><div class="p-q">"The resolution of angel tax issues will foster an environment of positivity and growth for India's next generation of founders."</div><div class="p-yr">Economic Times · 2023</div></div>
   </div>
 </section>
-
+ 
 <!-- ── CONNECT ── -->
 <section class="connect" id="connect">
   <div class="c-inner">
@@ -410,7 +411,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="footer-inner">
@@ -455,7 +456,7 @@
     </div>
   </div>
 </footer>
-
+ 
 <script src="shared.js"></script>
 <script>
 /* METRICS COUNTER */
@@ -484,7 +485,7 @@ new IntersectionObserver(function(entries){
     });
   }
 },{threshold:.3}).observe(document.getElementById('metrics'));
-
+ 
 /* TIMELINE */
 var tlObs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');tlObs.unobserve(e.target);}});

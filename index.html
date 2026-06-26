@@ -12,6 +12,27 @@
 /* ── INDEX-ONLY STYLES ── */
 
 /* HERO */
+/* ── FULL-BLEED HERO ── */
+.hero-full{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,12,7,.88) 0%,rgba(14,12,7,.72) 38%,rgba(14,12,7,.45) 68%,rgba(14,12,7,.55) 100%);}
+.hero-content{position:relative;z-index:1;padding:0 var(--pad);max-width:760px;}
+.hf-eye{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(247,244,238,.62);margin-bottom:28px;}
+.hf-name{font-family:var(--serif);font-size:clamp(64px,9vw,128px);font-weight:700;line-height:.98;letter-spacing:-.02em;color:#F7F4EE;margin-bottom:32px;}
+.hf-name em{font-style:italic;font-weight:400;color:#C9A96E;}
+.hf-desc{font-size:clamp(16px,1.6vw,21px);font-weight:400;line-height:1.65;color:rgba(247,244,238,.82);max-width:620px;margin-bottom:44px;}
+.hf-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+.hf-btn-light{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:18px 40px;background:#F7F4EE;color:#0E0C07;border:1.5px solid #F7F4EE;transition:background .25s,color .25s;}
+.hf-btn-light:hover{background:transparent;color:#F7F4EE;}
+.hf-btn-dark{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:18px 40px;background:transparent;color:#F7F4EE;border:1.5px solid rgba(247,244,238,.5);transition:background .25s,color .25s,border-color .25s;}
+.hf-btn-dark:hover{background:#F7F4EE;color:#0E0C07;border-color:#F7F4EE;}
+@media(max-width:768px){
+  .hf-ctas{flex-direction:column;}
+  .hf-btn-light,.hf-btn-dark{text-align:center;}
+  .hero-scrim{background:linear-gradient(180deg,rgba(14,12,7,.7) 0%,rgba(14,12,7,.82) 100%);}
+}
+
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 500px;position:relative;overflow:hidden;border-bottom:1px solid var(--ink08);}
 .hero-left{padding:136px var(--pad) 72px;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:2;}
 .hero-top{}
@@ -129,6 +150,20 @@
 
 /* PRESS */
 .press-sec{background:var(--cream);padding:88px var(--pad);}
+/* ── VOICES FROM THE INDUSTRY ── */
+.voices-sec{background:var(--parchment);padding:96px var(--pad);}
+.voices-head{text-align:center;margin-bottom:72px;}
+.voices-eye{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+.voices-title{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:400;color:var(--ink);letter-spacing:-.01em;line-height:1.1;}
+.voices-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 80px;max-width:1200px;margin:0 auto;}
+.voice-card{padding-left:32px;border-left:1.5px solid var(--gold);}
+.voice-q{font-family:var(--serif);font-size:clamp(20px,2.1vw,27px);font-style:italic;font-weight:400;line-height:1.5;color:var(--ink);margin-bottom:24px;}
+.voice-attr{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink45);}
+@media(max-width:860px){
+  .voices-grid{grid-template-columns:1fr;gap:44px;}
+  .voices-sec{padding:64px var(--pad);}
+  .voices-head{margin-bottom:48px;}
+}
 .press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink08);border:1px solid var(--ink08);margin-top:52px;}
 .p-card{background:var(--parchment);padding:32px 28px;transition:background .25s;}
 .p-card:hover{background:var(--warm-white);}
@@ -215,46 +250,19 @@
 </div>
 
 <!-- ── HERO ── -->
-<section class="hero" id="home">
-  <div class="hero-left">
-    <div class="hero-top">
-      <div class="h-eye rv"><div class="h-eye-line"></div><span class="h-eye-txt">Founder &amp; Chief Executive</span></div>
-      <div class="h-est rv d1">Est. 2013 &nbsp;·&nbsp; Gurugram &nbsp;·&nbsp; Dubai</div>
-      <h1 class="hero-h1 rv d2">
-        <span class="bl">India didn't need</span>
-        <span class="bl">another <em>broker.</em></span>
-        <span class="bl">It needed a</span>
-        <span class="bl">platform.</span>
-      </h1>
-      <p class="hero-desc rv d3">Built India's largest proptech from first principles — combining data intelligence, financial services, and global reach into one platform for the $800B Indian real estate market.</p>
-      <div class="hero-ctas rv d4">
-        <a href="#connect" class="btn-ink">Connect</a>
-        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="hero-yt">
-          <div class="yt-circle">↗</div>Watch on YouTube
-        </a>
-      </div>
-    </div>
-    <div class="hero-foot rv">
-      <div>
-        <div class="ped-label">Career Background</div>
-        <div class="ped-tags">
-          <span class="ped-tag">IIM Ahmedabad</span>
-          <span class="ped-tag">Standard Chartered</span>
-          <span class="ped-tag">Lehman Brothers</span>
-          <span class="ped-tag">Nomura</span>
-        </div>
-      </div>
-      <div class="scroll-cue">
-        <div class="scroll-pip"></div>
-        <span class="scroll-lbl">Scroll</span>
-      </div>
-    </div>
+<section class="hero-full" id="home">
+  <div class="hero-bg">
+    <img src="tanuj.png" alt="Tanuj Shori speaking on stage">
+    <div class="hero-scrim"></div>
   </div>
-  <div class="hero-right">
-    <img src="tanuj.png" alt="Tanuj Shori on stage at a leadership summit">
-    <div class="hero-fade"></div>
-    <div class="hero-ghost">12</div>
-    <div class="hero-cap">Tanuj Shori<br>Leadership Summit · 2024<br>Founder &amp; CEO, Square Yards</div>
+  <div class="hero-content">
+    <div class="hf-eye rv">Founder &amp; CEO &nbsp;·&nbsp; Square Yards</div>
+    <h1 class="hf-name rv d1">Tanuj <em>Shori</em></h1>
+    <p class="hf-desc rv d2">Building India's largest proptech and fintech real-estate platform — across 30 cities, 10 countries, and a network of 500+ developers and 90+ banks.</p>
+    <div class="hf-ctas rv d3">
+      <a href="#journey" class="hf-btn-light">Explore the Journey &nbsp;→</a>
+      <a href="#connect" class="hf-btn-dark">Connect</a>
+    </div>
   </div>
 </section>
 
@@ -387,12 +395,28 @@
 </section>
 
 <!-- ── PRESS ── -->
-<section class="press-sec">
-  <div class="eye rv"><div class="eye-line"></div><span class="eye-label">Selected Press</span></div>
-  <div class="press-grid">
-    <div class="p-card rv"><div class="p-pub">Forbes India</div><div class="p-q">"A celebration of unparalleled entrepreneurship amidst the uncharted territory of India's real estate market."</div><div class="p-yr">Forbes India · 2023</div></div>
-    <div class="p-card rv d1"><div class="p-pub">Times of India</div><div class="p-q">"RERA is going to create a tsunami in Indian real estate. The mid-market segment will lead industry growth in the decade ahead."</div><div class="p-yr">Times of India · 2022</div></div>
-    <div class="p-card rv d2"><div class="p-pub">The Economic Times</div><div class="p-q">"The resolution of angel tax issues will foster an environment of positivity and growth for India's next generation of founders."</div><div class="p-yr">Economic Times · 2023</div></div>
+<section class="voices-sec">
+  <div class="voices-head">
+    <div class="voices-eye rv">In the Press</div>
+    <h2 class="voices-title rv d1">Voices from the industry</h2>
+  </div>
+  <div class="voices-grid">
+    <div class="voice-card rv">
+      <div class="voice-q">"RERA is going to create a Tsunami in Indian Real Estate. Impacts of RERA in the Indian Real Estate Sector and how the mid-market segment is likely to lead to industry growth."</div>
+      <div class="voice-attr">— Times of India</div>
+    </div>
+    <div class="voice-card rv d1">
+      <div class="voice-q">"India is seeing rapid urbanisation and migration from rural areas where real estate will play a major role."</div>
+      <div class="voice-attr">— Outlook Money</div>
+    </div>
+    <div class="voice-card rv d2">
+      <div class="voice-q">"Tanuj Shori, CEO of Square Yards, was featured in Forbes India celebrating his entrepreneurship in the uncharted market of Indian real estate."</div>
+      <div class="voice-attr">— Forbes India</div>
+    </div>
+    <div class="voice-card rv d3">
+      <div class="voice-q">"The no-angel-tax resolution and share-value premium clarity will foster positivity and growth for India's startup ecosystem."</div>
+      <div class="voice-attr">— The Economic Times</div>
+    </div>
   </div>
 </section>
 

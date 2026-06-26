@@ -191,7 +191,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;}
 .ticker-track:hover{animation-play-state:paused;}
 @keyframes tick{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 .t-item{display:flex;align-items:center;gap:20px;padding:0 26px;white-space:nowrap;}
-.t-txt{font-family:var(--serif);font-size:12px;font-style:italic;color:rgba(247,244,238,.52);letter-spacing:.03em;}
+.t-txt{font-family:var(--serif);font-size:14px;font-style:italic;color:rgba(247,244,238,.82);letter-spacing:.03em;}
 .t-dot{width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:.65;flex-shrink:0;}
 
 /* ── FOOTER ── */

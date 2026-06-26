@@ -151,13 +151,13 @@
 /* PRESS */
 .press-sec{background:var(--cream);padding:88px var(--pad);}
 /* ── VOICES FROM THE INDUSTRY ── */
-.voices-sec{background:var(--parchment);padding:96px var(--pad);}
-.voices-head{text-align:center;margin-bottom:72px;}
+.voices-sec{background:var(--parchment);padding:60px var(--pad);}
+.voices-head{text-align:center;margin-bottom:44px;}
 .voices-eye{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
-.voices-title{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:400;color:var(--ink);letter-spacing:-.01em;line-height:1.1;}
-.voices-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 80px;max-width:1200px;margin:0 auto;}
+.voices-title{font-family:var(--serif);font-size:clamp(34px,4vw,52px);font-weight:400;color:var(--ink);letter-spacing:-.01em;line-height:1.1;}
+.voices-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 80px;max-width:1100px;margin:0 auto;}
 .voice-card{padding-left:32px;border-left:1.5px solid var(--gold);}
-.voice-q{font-family:var(--serif);font-size:clamp(20px,2.1vw,27px);font-style:italic;font-weight:400;line-height:1.5;color:var(--ink);margin-bottom:24px;}
+.voice-q{font-family:var(--serif);font-size:clamp(18px,1.9vw,23px);font-style:italic;font-weight:400;line-height:1.5;color:var(--ink);margin-bottom:18px;}
 .voice-attr{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink45);}
 @media(max-width:860px){
   .voices-grid{grid-template-columns:1fr;gap:44px;}
@@ -182,6 +182,9 @@
 .c-h em{font-style:italic;font-weight:300;color:var(--gold);}
 .c-sub{font-size:15px;font-weight:400;color:rgba(247,244,238,.42);margin-bottom:48px;line-height:1.80;}
 .c-btns{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
+.social-icons{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:36px;}
+.social-icon{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(247,244,238,.25);display:flex;align-items:center;justify-content:center;color:rgba(247,244,238,.7);transition:border-color .25s,color .25s,background .25s,transform .25s;}
+.social-icon:hover{border-color:var(--gold);color:var(--gold);background:rgba(181,136,31,.08);transform:translateY(-2px);}
 .c-btn-p{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:15px 38px;background:var(--gold);color:var(--ink);border:1.5px solid var(--gold);display:inline-block;transition:background .22s,color .22s;}
 .c-btn-p:hover{background:transparent;color:var(--gold);}
 .c-btn-g{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(247,244,238,.32);display:inline-flex;align-items:center;gap:6px;transition:color .2s;}
@@ -230,7 +233,6 @@
   <div class="nav-links">
     <a href="index.html" class="nav-a active">Home</a>
     <a href="index.html#journey" class="nav-a">Journey</a>
-    <a href="index.html#ecosystem" class="nav-a">Square Yards</a>
     <a href="articles.html" class="nav-a">Articles</a>
     <a href="media.html" class="nav-a">Media</a>
     <a href="awards.html" class="nav-a">Awards</a>
@@ -242,7 +244,6 @@
 <div class="mob-drawer" id="drawer">
   <a href="index.html" class="mob-a">Home</a>
   <a href="index.html#journey" class="mob-a">Journey</a>
-  <a href="index.html#ecosystem" class="mob-a">Square Yards</a>
   <a href="articles.html" class="mob-a">Articles</a>
   <a href="media.html" class="mob-a">Media</a>
   <a href="awards.html" class="mob-a">Awards</a>
@@ -431,6 +432,14 @@
       <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="c-btn-g">Watch on YouTube ↗</a>
       <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="c-btn-g">Visit Square Yards ↗</a>
     </div>
+    <div class="social-icons rv d4">
+      <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -462,8 +471,8 @@
     <div>
       <div class="footer-col-head">Connect</div>
       <div class="footer-col-links">
-        <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="footer-col-a">LinkedIn</a>
-        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="footer-col-a">YouTube</a>
+        <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="footer-col-a footer-social"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>LinkedIn</a>
+        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="footer-col-a footer-social"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
         <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Square Yards</a>
         <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Urban Money</a>
       </div>

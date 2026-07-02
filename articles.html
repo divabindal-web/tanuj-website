@@ -40,6 +40,38 @@
 .svg-overlay{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:absolute;inset:0;}
 .svg-txt{font-family:'Playfair Display',serif;font-size:52px;font-style:italic;font-weight:400;opacity:.14;letter-spacing:-.02em;}
 .svg-dark .svg-txt{color:#0E0C07;}.svg-light .svg-txt{color:#F7F4EE;}
+
+/* ===== modern magazine cards ===== */
+.mag-wrap{max-width:1180px;margin:0 auto;padding:36px var(--pad) 80px;}
+.mag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;}
+.mag-card{display:flex;flex-direction:column;background:var(--parchment);border:1px solid var(--ink08);border-radius:16px;overflow:hidden;text-decoration:none;transition:transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s,border-color .32s;}
+.mag-card:hover{transform:translateY(-7px);box-shadow:0 28px 56px -32px rgba(14,12,7,.55);border-color:var(--gold-rule);}
+.mag-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#1b2740,#0E0C07 75%);}
+.mag-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.mag-card:hover .mag-cover img{transform:scale(1.06);}
+.mag-cover::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,7,.82),rgba(14,12,7,.15) 55%,rgba(14,12,7,.05));}
+.mag-badge{position:absolute;top:15px;left:15px;z-index:2;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F7F4EE;background:rgba(181,136,31,.92);padding:6px 12px;border-radius:100px;}
+.mag-cover-title{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;font-family:'Playfair Display',serif;font-size:19px;line-height:1.24;color:#F7F4EE;}
+.mag-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;}
+.mag-excerpt{font-size:13px;line-height:1.6;color:var(--ink45);flex:1;}
+.mag-meta{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid var(--ink08);}
+.mag-yr{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink45);}
+.mag-read{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:inline-flex;gap:6px;align-items:center;}
+.mag-card:hover .mag-read span{transform:translateX(4px);}
+.mag-read span{transition:transform .3s;}
+/* featured lead */
+.mag-card--feat{grid-column:1/-1;flex-direction:row;}
+.mag-card--feat .mag-cover{flex:1.15;aspect-ratio:auto;min-height:340px;}
+.mag-card--feat .mag-cover-title{font-size:30px;left:30px;right:30px;bottom:26px;}
+.mag-card--feat .mag-body{flex:1;justify-content:center;padding:40px 44px;}
+.mag-card--feat .mag-excerpt{font-size:15px;}
+.mag-card--feat .mag-badge{top:22px;left:22px;}
+@media(max-width:760px){.mag-card--feat{flex-direction:column;}.mag-card--feat .mag-cover{min-height:220px;}.mag-card--feat .mag-body{padding:24px;}}
+/* modern filter pills */
+.filter-bar{justify-content:center;flex-wrap:wrap;gap:10px;border-bottom:none !important;padding:8px var(--pad) 4px !important;}
+.filter-btn{border:1px solid var(--ink08) !important;border-radius:100px !important;padding:9px 20px !important;margin:0 !important;}
+.filter-btn.on{background:var(--ink);color:#F7F4EE !important;border-color:var(--ink) !important;}
+
 </style>
 </head>
 <body>
@@ -112,50 +144,32 @@
   <button class="filter-btn" data-f="product">Product</button>
 </div>
 
-<div class="articles-grid">
-  <a href="https://www.tanujshori.com/article/a-blockbuster-q3-fy24-for-square-yards-with-53-of-yoy-revenue-growth/" target="_blank" rel="noopener" class="a-card rv" data-cat="financial">
-    <div class="a-card-img cover-4 cover-light" style="position:relative"><div class="svg-overlay svg-dark"><span class="svg-txt">53%</span></div></div>
-    <div class="a-card-cat">Financial · Q3 FY24</div>
-    <div class="a-card-title">A Blockbuster Q3 FY24 for Square Yards with 53% YoY Revenue Growth</div>
-    <div class="a-card-excerpt">Financial services posted 2x growth run rate, touching USD $300M in disbursements.</div>
-    <div class="a-card-meta"><span class="a-card-yr">2024</span><span class="a-card-arr">↗</span></div>
+<div class="mag-wrap"><div class="mag-grid">
+  <a href="https://www.tanujshori.com/article/a-blockbuster-q3-fy24-for-square-yards-with-53-of-yoy-revenue-growth/" target="_blank" rel="noopener" class="mag-card a-card mag-card--feat rv" data-cat="financial">
+    <div class="mag-cover"><span class="mag-badge">Financial</span><img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">A Blockbuster Q3 FY24: 53% YoY Revenue Growth</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Financial services posted a 2x growth run rate, touching USD $300M in disbursements.</p><div class="mag-meta"><span class="mag-yr">2024</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
-  <a href="https://www.tanujshori.com/article/square-yards-posts-stellar-revenue-feat-for-fy2022-23/" target="_blank" rel="noopener" class="a-card rv d1" data-cat="financial">
-    <div class="a-card-img cover-5 cover-dark" style="position:relative"><div class="svg-overlay svg-light"><span class="svg-txt">FY23</span></div></div>
-    <div class="a-card-cat">Annual Review · FY23</div>
-    <div class="a-card-title">Square Yards Posts Stellar Revenue Feat for FY 2022–23</div>
-    <div class="a-card-excerpt">$125M raised in total funding — $65M debt capital and $60M equity. Profitability in sight.</div>
-    <div class="a-card-meta"><span class="a-card-yr">2023</span><span class="a-card-arr">↗</span></div>
+  <a href="https://www.tanujshori.com/article/square-yards-posts-stellar-revenue-feat-for-fy2022-23/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="financial">
+    <div class="mag-cover"><span class="mag-badge">Annual Review</span><img src="https://images.unsplash.com/photo-1496514428289-1e75a4dee5db?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Square Yards Posts Stellar Revenue for FY 2022-23</span></div>
+    <div class="mag-body"><p class="mag-excerpt">$125M raised in total funding, with profitability in sight.</p><div class="mag-meta"><span class="mag-yr">2023</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
-  <a href="https://www.tanujshori.com/article/azuro-by-square-yards-achieves-huge-milestone-for-its-property-management-business/" target="_blank" rel="noopener" class="a-card rv d2" data-cat="product">
-    <div class="a-card-img cover-6 cover-light" style="position:relative"><div class="svg-overlay svg-dark"><span class="svg-txt">Azuro</span></div></div>
-    <div class="a-card-cat">Product · Azuro</div>
-    <div class="a-card-title">Azuro by Square Yards Achieves Major Milestone in Property Management</div>
-    <div class="a-card-excerpt">Leveraging increasing demand while growing its share in India's property management market.</div>
-    <div class="a-card-meta"><span class="a-card-yr">2022</span><span class="a-card-arr">↗</span></div>
+  <a href="https://www.tanujshori.com/article/azuro-by-square-yards-achieves-huge-milestone-for-its-property-management-business/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="product">
+    <div class="mag-cover"><span class="mag-badge">Product</span><img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Azuro Hits a Major Property-Management Milestone</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Growing its share of India's property management market.</p><div class="mag-meta"><span class="mag-yr">2022</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
-  <a href="https://www.tanujshori.com/article/square-yards-gets-into-fractional-ownership-category-with-new-venture/" target="_blank" rel="noopener" class="a-card rv" data-cat="product">
-    <div class="a-card-img cover-7 cover-dark" style="position:relative"><div class="svg-overlay svg-light"><span class="svg-txt">PropsAMC</span></div></div>
-    <div class="a-card-cat">New Ventures · PropsAMC</div>
-    <div class="a-card-title">Square Yards Enters Fractional Ownership Category with PropsAMC</div>
-    <div class="a-card-excerpt">Data intelligence and asset management division raises capital for Grade-A commercial property.</div>
-    <div class="a-card-meta"><span class="a-card-yr">2022</span><span class="a-card-arr">↗</span></div>
+  <a href="https://www.tanujshori.com/article/square-yards-gets-into-fractional-ownership-category-with-new-venture/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="product">
+    <div class="mag-cover"><span class="mag-badge">New Ventures</span><img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Square Yards Enters Fractional Ownership with PropsAMC</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Raising capital for Grade-A commercial property via data intelligence.</p><div class="mag-meta"><span class="mag-yr">2022</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
-  <a href="https://www.tanujshori.com/article/an-innovative-ai-based-marketing-and-sales-platform-from-square-yards/" target="_blank" rel="noopener" class="a-card rv d1" data-cat="product">
-    <div class="a-card-img cover-8 cover-light" style="position:relative"><div class="svg-overlay svg-dark"><span class="svg-txt">AI</span></div></div>
-    <div class="a-card-cat">Technology · SmartAgent</div>
-    <div class="a-card-title">SmartAgent: An AI-Based Marketing and Sales Platform for Real Estate Agents</div>
-    <div class="a-card-excerpt">Launched for UAE's real estate agencies — AI-powered sales and marketing solutions at scale.</div>
-    <div class="a-card-meta"><span class="a-card-yr">2023</span><span class="a-card-arr">↗</span></div>
+  <a href="https://www.tanujshori.com/article/an-innovative-ai-based-marketing-and-sales-platform-from-square-yards/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="product">
+    <div class="mag-cover"><span class="mag-badge">Technology</span><img src="https://images.unsplash.com/photo-1496514428289-1e75a4dee5db?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">SmartAgent: AI Sales & Marketing for Agents</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Launched for the UAE's real estate agencies, AI-powered at scale.</p><div class="mag-meta"><span class="mag-yr">2023</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
-  <a href="https://www.tanujshori.com/article/square-yards-the-team-no-1-in-the-real-estate-market-with-20-co-founders/" target="_blank" rel="noopener" class="a-card rv d2" data-cat="market">
-    <div class="a-card-img cover-9 cover-dark" style="position:relative"><div class="svg-overlay svg-light"><span class="svg-txt">Team</span></div></div>
-    <div class="a-card-cat">Company · Culture</div>
-    <div class="a-card-title">Square Yards — The Team Number One in Real Estate with 20 Co-Founders</div>
-    <div class="a-card-excerpt">How building a co-founder culture from the start created India's most resilient proptech team.</div>
-    <div class="a-card-meta"><span class="a-card-yr">2022</span><span class="a-card-arr">↗</span></div>
+  <a href="https://www.tanujshori.com/article/square-yards-the-team-no-1-in-the-real-estate-market-with-20-co-founders/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="market">
+    <div class="mag-cover"><span class="mag-badge">Company</span><img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">The Team Number One, Built on 20 Co-Founders</span></div>
+    <div class="mag-body"><p class="mag-excerpt">How a co-founder culture created India's most resilient proptech team.</p><div class="mag-meta"><span class="mag-yr">2022</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
-</div>
+</div></div>
 
 <div style="text-align:center;padding:0 var(--pad) 72px;">
   <a href="https://www.tanujshori.com/article/" target="_blank" rel="noopener" class="btn-ink rv">View All Articles on tanujshori.com ↗</a>
@@ -216,7 +230,7 @@ document.querySelectorAll('.filter-btn').forEach(function(btn){
     btn.classList.add('on');
     var f=btn.dataset.f;
     document.querySelectorAll('.a-card').forEach(function(c){
-      c.style.display=(f==='all'||c.dataset.cat===f)?'block':'none';
+      c.style.display=(f==='all'||c.dataset.cat===f)?'':'none';
     });
   });
 });

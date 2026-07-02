@@ -30,6 +30,38 @@
   .mf-divider{display:none;}
   .media-pub-strip{gap:24px;}
 }
+
+/* ===== modern magazine cards ===== */
+.mag-wrap{max-width:1180px;margin:0 auto;padding:36px var(--pad) 80px;}
+.mag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;}
+.mag-card{display:flex;flex-direction:column;background:var(--parchment);border:1px solid var(--ink08);border-radius:16px;overflow:hidden;text-decoration:none;transition:transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s,border-color .32s;}
+.mag-card:hover{transform:translateY(-7px);box-shadow:0 28px 56px -32px rgba(14,12,7,.55);border-color:var(--gold-rule);}
+.mag-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#1b2740,#0E0C07 75%);}
+.mag-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.mag-card:hover .mag-cover img{transform:scale(1.06);}
+.mag-cover::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,7,.82),rgba(14,12,7,.15) 55%,rgba(14,12,7,.05));}
+.mag-badge{position:absolute;top:15px;left:15px;z-index:2;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F7F4EE;background:rgba(181,136,31,.92);padding:6px 12px;border-radius:100px;}
+.mag-cover-title{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;font-family:'Playfair Display',serif;font-size:19px;line-height:1.24;color:#F7F4EE;}
+.mag-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;}
+.mag-excerpt{font-size:13px;line-height:1.6;color:var(--ink45);flex:1;}
+.mag-meta{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid var(--ink08);}
+.mag-yr{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink45);}
+.mag-read{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:inline-flex;gap:6px;align-items:center;}
+.mag-card:hover .mag-read span{transform:translateX(4px);}
+.mag-read span{transition:transform .3s;}
+/* featured lead */
+.mag-card--feat{grid-column:1/-1;flex-direction:row;}
+.mag-card--feat .mag-cover{flex:1.15;aspect-ratio:auto;min-height:340px;}
+.mag-card--feat .mag-cover-title{font-size:30px;left:30px;right:30px;bottom:26px;}
+.mag-card--feat .mag-body{flex:1;justify-content:center;padding:40px 44px;}
+.mag-card--feat .mag-excerpt{font-size:15px;}
+.mag-card--feat .mag-badge{top:22px;left:22px;}
+@media(max-width:760px){.mag-card--feat{flex-direction:column;}.mag-card--feat .mag-cover{min-height:220px;}.mag-card--feat .mag-body{padding:24px;}}
+/* modern filter pills */
+.filter-bar{justify-content:center;flex-wrap:wrap;gap:10px;border-bottom:none !important;padding:8px var(--pad) 4px !important;}
+.filter-btn{border:1px solid var(--ink08) !important;border-radius:100px !important;padding:9px 20px !important;margin:0 !important;}
+.filter-btn.on{background:var(--ink);color:#F7F4EE !important;border-color:var(--ink) !important;}
+
 </style>
 </head>
 <body>
@@ -80,67 +112,48 @@
   </div>
 </div>
 
-<div style="padding:64px var(--pad) 0;">
-  <div class="eye rv"><div class="eye-line"></div><span class="eye-label">Featured Coverage</span></div>
-</div>
-
-<div class="media-grid-full" style="margin-top:32px;">
-  <div class="media-feat rv">
-    <div>
-      <div class="mf-pub">Forbes India</div>
-      <div class="mf-q">"Tanuj Shori was recently featured as a token of celebration of his unparalleled entrepreneurship amidst the uncharted territory of India's real estate market."</div>
-      <div class="mf-yr">Forbes India · 2023</div>
-    </div>
-    <div class="mf-divider"></div>
-    <div class="mf-context">Forbes India's recognition of Tanuj Shori places him among India's most consequential founders — acknowledging not just commercial scale, but the conviction to build where no systematised infrastructure existed. Square Yards redefined what it meant to transact property in India.</div>
+<div class="mag-wrap"><div class="mag-grid">
+  <div class="mag-card mag-card--feat rv">
+    <div class="mag-cover"><span class="mag-badge">Forbes India</span><img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Featured among India's most consequential founders</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Forbes India celebrated Tanuj Shori's unparalleled entrepreneurship amid the uncharted territory of India's real estate market, acknowledging not just scale but the conviction to build where no infrastructure existed.</p><div class="mag-meta"><span class="mag-yr">2023</span></div></div>
   </div>
-
-  <div class="med-card rv">
-    <div class="med-pub">Times of India</div>
-    <div class="med-q">"RERA is going to create a tsunami in Indian real estate. Impacts of RERA in the Indian Real Estate Sector and how the mid-market segment is likely to lead industry growth."</div>
-    <div class="med-yr">Times of India · 2022</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">Financial Times</span><img src="https://images.unsplash.com/photo-1496514428289-1e75a4dee5db?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Ranked #229, FT Asia-Pacific High-Growth</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Square Yards recorded 205.6% absolute revenue growth, among the fastest-growing companies in the region.</p><div class="mag-meta"><span class="mag-yr">2021</span></div></div>
   </div>
-  <div class="med-card rv d1">
-    <div class="med-pub">Outlook Money</div>
-    <div class="med-q">"India is seeing rapid urbanisation and migration from rural areas where real estate will play a major role in shaping the economy."</div>
-    <div class="med-yr">Outlook Money · 2022</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">The Economic Times</span><img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">On the angel-tax resolution</span></div>
+    <div class="mag-body"><p class="mag-excerpt">The resolution will foster an environment of positivity and growth for India's startup ecosystem.</p><div class="mag-meta"><span class="mag-yr">2023</span></div></div>
   </div>
-  <div class="med-card rv d2">
-    <div class="med-pub">The Economic Times</div>
-    <div class="med-q">"The angel tax resolution and share value premium issue resolution will foster an environment of positivity and growth for India's startup ecosystem."</div>
-    <div class="med-yr">Economic Times · 2023</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">Times of India</span><img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">RERA will create a tsunami in real estate</span></div>
+    <div class="mag-body"><p class="mag-excerpt">On the impact of RERA and how the mid-market segment is likely to lead industry growth.</p><div class="mag-meta"><span class="mag-yr">2022</span></div></div>
   </div>
-  <div class="med-card rv">
-    <div class="med-pub">Financial Times Asia Pacific</div>
-    <div class="med-q">Square Yards ranked #229 in the Financial Times Asia Pacific High-Growth Companies list — recording 205.6% absolute revenue growth, among the fastest in the region.</div>
-    <div class="med-yr">Financial Times · 2021</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">Business Standard</span><img src="https://images.unsplash.com/photo-1496514428289-1e75a4dee5db?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">$25M from ADM Capital</span></div>
+    <div class="mag-body"><p class="mag-excerpt">“We have been capital efficient from the beginning, with a clear objective of high ROI.”</p><div class="mag-meta"><span class="mag-yr">2021</span></div></div>
   </div>
-  <div class="med-card rv d1">
-    <div class="med-pub">YourStory</div>
-    <div class="med-q">Tanuj Shori spoke at YourStory's prestigious Investor Summit 2021 among a select group of entrepreneurs and industry stalwarts shaping India's startup future.</div>
-    <div class="med-yr">YourStory · 2021</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">Outlook Money</span><img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Real estate and rapid urbanisation</span></div>
+    <div class="mag-body"><p class="mag-excerpt">India's migration from rural areas means real estate will play a major role in shaping the economy.</p><div class="mag-meta"><span class="mag-yr">2022</span></div></div>
   </div>
-  <div class="med-card rv d2">
-    <div class="med-pub">Economic Times Growth Champions</div>
-    <div class="med-q">Square Yards recognised as one of India's fastest-growing companies — featuring alongside the nation's most impactful business builders in the annual ranking.</div>
-    <div class="med-yr">Economic Times · 2021</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">YourStory</span><img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Investor Summit 2021</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Spoke among a select group of entrepreneurs and stalwarts shaping India's startup future.</p><div class="mag-meta"><span class="mag-yr">2021</span></div></div>
   </div>
-  <div class="med-card rv">
-    <div class="med-pub">Real Estate News</div>
-    <div class="med-q">"Real estate prices will become more transparent and reliable as Square Yards compiles transaction data across 11+ cities in its price intelligence platform."</div>
-    <div class="med-yr">Global Realty Bytes · 2022</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">ET Growth Champions</span><img src="https://images.unsplash.com/photo-1496514428289-1e75a4dee5db?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">One of India's fastest-growing companies</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Featured alongside the nation's most impactful business builders in the annual ranking.</p><div class="mag-meta"><span class="mag-yr">2021</span></div></div>
   </div>
-  <div class="med-card rv d1">
-    <div class="med-pub">Business Standard</div>
-    <div class="med-q">Square Yards receives $25 million from ADM Capital — CEO Tanuj Shori: "We have been capital efficient from the beginning with a clear objective of providing high ROI."</div>
-    <div class="med-yr">Business Standard · 2021</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">Business Standard</span><img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Price transparency at scale</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Square Yards compiles transaction data across 11+ cities in its price-intelligence platform.</p><div class="mag-meta"><span class="mag-yr">2022</span></div></div>
   </div>
-  <div class="med-card rv d2">
-    <div class="med-pub">Gulf Real Estate Awards</div>
-    <div class="med-q">Square Yards felicitated at the Gulf Real Estate Awards — recognising the platform's role in connecting Gulf-based NRI investors to the Indian property market at scale.</div>
-    <div class="med-yr">Gulf Real Estate Awards · 2019</div>
+  <div class="mag-card rv">
+    <div class="mag-cover"><span class="mag-badge">Gulf Real Estate Awards</span><img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Felicitated for the NRI corridor</span></div>
+    <div class="mag-body"><p class="mag-excerpt">Recognised for connecting Gulf-based NRI investors to the Indian property market at scale.</p><div class="mag-meta"><span class="mag-yr">2019</span></div></div>
   </div>
-</div>
+</div></div>
 
 <div style="text-align:center;padding:0 var(--pad) 72px;">
   <a href="https://www.tanujshori.com/media/" target="_blank" rel="noopener" class="btn-ink rv">View Full Media Archive ↗</a>

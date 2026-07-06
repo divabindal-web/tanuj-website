@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Articles — Tanuj Shori</title>
+<title>Articles · Tanuj Shori</title>
 <meta name="description" content="Writing and thinking by Tanuj Shori, Founder and CEO of Square Yards, on Indian real estate, proptech, and building at scale.">
 <link rel="stylesheet" href="shared.css">
 <style>
@@ -73,7 +73,37 @@
 .filter-btn.on{background:var(--ink);color:#F7F4EE !important;border-color:var(--ink) !important;}
 
 </style>
-</head>
+
+<style>
+/* ── PREMIUM MOTION ── */
+@keyframes mRise{from{transform:translateY(112%)}to{transform:translateY(0)}}
+@keyframes lineGrow{from{width:0}to{width:28px}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(44px,-30px) scale(1.14)}}
+@keyframes orbB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-52px,26px) scale(1.07)}}
+.page-header{position:relative;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;opacity:.55;z-index:0;}
+.orb-a{width:360px;height:360px;right:6%;top:-90px;background:radial-gradient(circle,rgba(181,136,31,.20),transparent 70%);animation:orbA 14s ease-in-out infinite;}
+.orb-b{width:280px;height:280px;right:26%;bottom:-110px;background:radial-gradient(circle,rgba(181,136,31,.11),transparent 70%);animation:orbB 18s ease-in-out infinite;}
+.page-header>*{position:relative;z-index:1;}
+.page-header-eye-line{animation:lineGrow .8s cubic-bezier(.16,1,.3,1) both;}
+.page-header-eye-text{animation:fadeUp .7s .15s cubic-bezier(.16,1,.3,1) both;}
+.mline{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em;}
+.mline-in{display:inline-block;transform:translateY(112%);animation:mRise .95s .18s cubic-bezier(.16,1,.3,1) forwards;}
+.mline:nth-of-type(2) .mline-in{animation-delay:.34s;}
+.page-header-sub{animation:fadeUp .8s .58s cubic-bezier(.16,1,.3,1) both;}
+.img-rev{position:relative;}
+.img-rev::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(105deg,var(--cream) 55%,rgba(181,136,31,.30));transform:translateX(0);transition:transform 1.05s cubic-bezier(.7,0,.2,1) .1s;}
+.vis .img-rev::after{transform:translateX(102%);}
+.a-card{transition:transform .35s cubic-bezier(.16,1,.3,1);}
+.a-card:hover{transform:translateY(-4px);}
+@media(prefers-reduced-motion:reduce){
+  .mline-in,.page-header-eye-line,.page-header-eye-text,.page-header-sub{animation:none!important;transform:none!important;opacity:1!important;}
+  .orb{display:none;}
+  .img-rev::after{display:none;}
+}
+</style>
+<style>.feat-sm,.feat-big{transition:transform .35s cubic-bezier(.16,1,.3,1);}.feat-sm:hover{transform:translateY(-3px);}</style></head>
 <body>
 <div class="cur" id="cur"></div>
 <div class="cur-ring" id="ring"></div>
@@ -82,16 +112,14 @@
   <a href="index.html" class="nav-brand">Tanuj Shori</a>
   <div class="nav-links">
     <a href="index.html" class="nav-a">Home</a>
-    <a href="index.html#thinking" class="nav-a">Thinking</a>
     <a href="index.html#journey" class="nav-a">Journey</a>
-    <a href="index.html#ecosystem" class="nav-a">Square Yards</a>
     <a href="articles.html" class="nav-a active">Articles</a>
     <a href="media.html" class="nav-a">Media</a>
     <a href="awards.html" class="nav-a">Awards</a>
+    <a href="videos.html" class="nav-a">Videos</a>
     <a href="index.html#connect" class="nav-a">Connect</a>
     <span class="nav-social">
       <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="nav-ico" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.24 8h4.5v15H.24V8zm7.5 0h4.31v2.05h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.49c0-1.55-.03-3.54-2.16-3.54-2.16 0-2.49 1.69-2.49 3.43V23h-4.5V8z"/></svg></a>
-      <a href="https://www.instagram.com/square_yards/" target="_blank" rel="noopener" class="nav-ico" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
       <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="nav-ico" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.45 12 20.45 12 20.45s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
     </span>
   </div>
@@ -99,24 +127,27 @@
 </nav>
 <div class="mob-drawer" id="drawer">
   <a href="index.html" class="mob-a">Home</a>
-  <a href="index.html#thinking" class="mob-a">Thinking</a>
   <a href="index.html#journey" class="mob-a">Journey</a>
   <a href="articles.html" class="mob-a">Articles</a>
   <a href="media.html" class="mob-a">Media</a>
   <a href="awards.html" class="mob-a">Awards</a>
+  <a href="videos.html" class="mob-a">Videos</a>
   <a href="index.html#connect" class="mob-a">Connect</a>
 </div>
 
 <div class="page-header">
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
   <div class="page-header-eye rv"><div class="page-header-eye-line"></div><span class="page-header-eye-text">Writing</span></div>
-  <h1 class="page-header-h rv d1">Articles &amp; <em>Perspectives</em></h1>
-  <p class="page-header-sub rv d2">Analysis of Indian real estate, proptech, capital markets, and the business of building at scale — written by Tanuj Shori.</p>
+  <h1 class="page-header-h"><span class="mline"><span class="mline-in">Articles &amp;</span></span> <span class="mline"><span class="mline-in"><em>Perspectives</em></span></span></h1>
+  <p class="page-header-sub rv d2">Analysis of Indian real estate, proptech, capital markets, and the business of building at scale, written by Tanuj Shori.</p>
 </div>
 
 <!-- FEATURED EDITORIAL LAYOUT -->
 <div class="featured-row">
-  <a href="https://www.tanujshori.com/article/square-yards-continues-its-profitability-streak-over-rs-350-crores-revenue-for-financial-year-2025-quarter-3/" target="_blank" rel="noopener" class="feat-big">
-    <div class="feat-big-img cover-1"><div class="svg-overlay svg-light"><span class="svg-txt">₹350Cr+</span></div></div>
+  <a href="https://www.tanujshori.com/article/square-yards-continues-its-profitability-streak-over-rs-350-crores-revenue-for-financial-year-2025-quarter-3/" target="_blank" rel="noopener" class="feat-big rv">
+    <div class="feat-big-img img-rev cover-1"><div class="svg-overlay svg-light"><span class="svg-txt">₹350Cr+</span></div></div>
     <div class="feat-big-overlay"></div>
     <div class="feat-big-content">
       <div class="feat-big-cat">Financial Update · Q3 FY25</div>
@@ -126,12 +157,12 @@
   </a>
   <a href="https://www.tanujshori.com/article/market-boom-5-5-lakh-deals-worth-rs-4-trillion-prices-skyrocket-60-percent-in-5-years/" target="_blank" rel="noopener" class="feat-sm">
     <div class="feat-sm-cat">Market Analysis</div>
-    <div class="feat-sm-title">Market Boom: 5.5 Lakh Deals Worth ₹4 Trillion — Prices Up 60% in Five Years</div>
+    <div class="feat-sm-title">Market Boom: 5.5 Lakh Deals Worth ₹4 Trillion. Prices Up 60% in Five Years</div>
     <div class="feat-sm-yr">2024</div>
   </a>
   <a href="https://www.tanujshori.com/article/square-yards-posts-inr-261-revenue-registers-52-y-o-y-revenue-growth-in-q1-fy25/" target="_blank" rel="noopener" class="feat-sm">
     <div class="feat-sm-cat">Quarterly Results · Q1 FY25</div>
-    <div class="feat-sm-title">Square Yards Posts ₹261 Cr Revenue — 52% YoY Revenue Growth</div>
+    <div class="feat-sm-title">Square Yards Posts ₹261 Cr Revenue: 52% YoY Revenue Growth</div>
     <div class="feat-sm-yr">2024</div>
   </a>
 </div>
@@ -181,7 +212,7 @@
     <div>
       <div class="footer-brand-name">Tanuj Shori</div>
       <div class="footer-brand-sub">Founder &amp; CEO · Square Yards</div>
-      <div class="footer-brand-desc">Built India's largest proptech platform from the conviction that real estate was a data problem — not a brokerage one. ₹1,400 Cr+ revenue across 9 countries.</div>
+      <div class="footer-brand-desc">Built India's largest proptech platform from the conviction that real estate was a data problem, not a brokerage one. ₹1,400 Cr+ revenue across 9 countries.</div>
     </div>
     <div>
       <div class="footer-col-head">Navigate</div>

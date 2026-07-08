@@ -321,3 +321,34 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;}
 .li-card-body{font-family:var(--sans,Inter);font-size:13.5px;line-height:1.8;color:rgba(26,23,18,.65);padding:22px;}
 .li-card-foot{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-top:1px solid rgba(26,23,18,.08);font-family:var(--sans,Inter);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--gold,#B5881F);}
 @media(max-width:900px){.li-inner{grid-template-columns:1fr;gap:44px;}.li-sec{padding:80px var(--pad,7vw);}}
+
+/* Journey: pin the headline while the timeline scrolls */
+@media(min-width:1000px){
+  .journey-inner > div:first-child{position:sticky;top:120px;align-self:start;}
+}
+/* Editorial article covers (distinct, on-brand, no stock) */
+.edt-cover{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:16px 18px;overflow:hidden;}
+.edt-cover::after{content:'';position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;border:1px solid rgba(181,136,31,.28);}
+.ec-motif{font-family:var(--serif,"Playfair Display");font-weight:600;font-size:clamp(30px,3vw,44px);line-height:1;letter-spacing:-.01em;position:relative;z-index:1;}
+.ec-tag{font-family:var(--sans,Inter);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;margin-top:8px;opacity:.65;position:relative;z-index:1;}
+.ec-1{background:linear-gradient(135deg,#141109,#241D0E);}.ec-1 .ec-motif{color:var(--gold,#B5881F);}.ec-1 .ec-tag{color:rgba(247,244,238,.7);}
+.ec-2{background:linear-gradient(135deg,#EFE9DB,#E2D9C4);}.ec-2 .ec-motif{color:#1A1712;}.ec-2 .ec-tag{color:rgba(26,23,18,.6);}
+.ec-3{background:linear-gradient(135deg,#B5881F,#8F6A14);}.ec-3 .ec-motif{color:#FBF9F4;}.ec-3 .ec-tag{color:rgba(251,249,244,.75);}
+/* Distinct motifs on the articles page featured covers */
+.cover-1,.cover-2,.cover-3{position:relative;overflow:hidden;}
+.cover-1::after,.cover-2::after,.cover-3::after{position:absolute;right:-8px;top:-26px;font-family:var(--serif,"Playfair Display");font-weight:600;font-size:150px;line-height:1;pointer-events:none;}
+.cover-1::after{content:'₹';color:rgba(181,136,31,.14);}
+.cover-2::after{content:'№';color:rgba(26,23,18,.08);}
+.cover-3::after{content:'↗';color:rgba(251,249,244,.10);}
+/* Video group headers */
+.vg-head{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--ink08,rgba(26,23,18,.08));padding-bottom:14px;margin:56px var(--pad,7vw) 28px;}
+.vg-head:first-of-type{margin-top:0;}
+.vg-h{font-family:var(--serif,"Playfair Display");font-size:clamp(26px,3vw,38px);font-weight:500;color:var(--ink,#1A1712);line-height:1;}
+.vg-h span{color:var(--gold,#B5881F);}
+.vg-count{font-family:var(--sans,Inter);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(26,23,18,.4);}
+.v-feature{margin:0 var(--pad,7vw) 56px;}
+.v-feature-frame{position:relative;aspect-ratio:16/9;border:1px solid var(--ink08,rgba(26,23,18,.1));background:#000;}
+.v-feature-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.v-feature-cap{display:flex;justify-content:space-between;gap:16px;margin-top:14px;font-family:var(--sans,Inter);}
+.v-feature-t{font-family:var(--serif,"Playfair Display");font-size:20px;font-weight:500;color:var(--ink,#1A1712);}
+.v-feature-k{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#B5881F);align-self:center;white-space:nowrap;}

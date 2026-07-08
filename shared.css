@@ -352,3 +352,31 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;}
 .v-feature-cap{display:flex;justify-content:space-between;gap:16px;margin-top:14px;font-family:var(--sans,Inter);}
 .v-feature-t{font-family:var(--serif,"Playfair Display");font-size:20px;font-weight:500;color:var(--ink,#1A1712);}
 .v-feature-k{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#B5881F);align-self:center;white-space:nowrap;}
+
+/* Featured covers: real photography under the gold motifs */
+.cover-1{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-2{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-3{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-4{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-5{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-6{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-7{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-8{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.cover-9{background-image:linear-gradient(to top,rgba(14,12,7,.72),rgba(14,12,7,.28) 55%,rgba(14,12,7,.12)),url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=900&q=80') !important;background-size:cover !important;background-position:center !important;}
+.feat-sm{color:#F7F4EE;}
+.feat-sm .feat-sm-title{color:#F7F4EE;}
+.feat-sm .feat-sm-cat{color:rgba(247,244,238,.75);}
+.feat-sm .feat-sm-yr{color:rgba(247,244,238,.55);}
+.feat-sm>*{position:relative;z-index:1;}
+
+.mag-photo{aspect-ratio:16/9;background-size:cover;background-position:center;margin-bottom:16px;filter:saturate(.92) contrast(1.02);transition:filter .4s;}
+.mag-card:hover .mag-photo{filter:saturate(1.05) contrast(1.05);}
+/* Cinematic hero treatment */
+.hero-bg img{transform:scale(1.08);filter:blur(3px) brightness(.88) saturate(1.05) sepia(5%);will-change:transform;}
+/* Blur-up reveals */
+.rv{filter:blur(9px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1),filter .85s cubic-bezier(.16,1,.3,1);}
+.rv.vis{filter:blur(0);}
+@media(prefers-reduced-motion:reduce){.rv{filter:none !important;}}
+/* Card tilt glare */
+.tg-glare{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;z-index:3;}
+[data-tilt]{will-change:transform;}

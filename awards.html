@@ -16,10 +16,10 @@
 /* stats band */
 .aw-hero{background:var(--ink);padding:40px var(--pad);border-bottom:1px solid var(--gold-rule);}
 .aw-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1100px;}
-.aw-stat{padding:0 36px;border-right:1px solid rgba(247,244,238,.08);display:flex;flex-direction:column;justify-content:flex-start;}
+.aw-stat{padding:0 36px;border-right:1px solid rgba(247,244,238,.08);display:flex;flex-direction:column;justify-content:flex-end;}
 .aw-stat:first-child{padding-left:0;}
 .aw-stat:last-child{border-right:none;}
-.aw-stat-n{font-family:var(--sans);font-size:34px;font-weight:500;color:rgba(247,244,238,.92);letter-spacing:-.02em;line-height:44px;white-space:nowrap;}
+.aw-stat-n{font-family:var(--serif);font-size:46px;font-weight:500;color:rgba(247,244,238,.95);letter-spacing:-.01em;line-height:1;white-space:nowrap;display:flex;align-items:baseline;min-height:46px;}
 .aw-stat-n span{color:var(--gold);}
 .aw-stat-l{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,244,238,.35);margin-top:8px;line-height:1.6;}
 
@@ -30,7 +30,7 @@
 .tl-aw-yr{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--gold);letter-spacing:.06em;padding-top:22px;text-align:right;}
 .tl-aw-line{background:var(--ink08);position:relative;}
 .tl-aw-line::before{content:'';position:absolute;top:24px;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:var(--parchment);border:2px solid var(--gold);}
-.tl-aw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.tl-aw-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
 .tl-aw-card{background:var(--warm-white);border:1px solid var(--ink08);padding:24px 22px;position:relative;overflow:hidden;transition:border-color .25s,background .25s,transform .25s;}
 .tl-aw-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .36s ease;}
 .tl-aw-card:hover{background:#fff;border-color:rgba(181,136,31,.35);transform:translateY(-2px);}
@@ -132,7 +132,7 @@
 <div class="aw-hero">
   <div class="aw-stats">
     <div class="aw-stat"><div class="aw-stat-n">8<span>+</span></div><div class="aw-stat-l">Awards &amp;<br>Recognitions</div></div>
-    <div class="aw-stat"><div class="aw-stat-n">2016<span>–</span>23</div><div class="aw-stat-l">Years of<br>Recognition</div></div>
+    <div class="aw-stat"><div class="aw-stat-n">9</div><div class="aw-stat-l">Years of<br>Recognition</div></div>
     <div class="aw-stat"><div class="aw-stat-n">#229</div><div class="aw-stat-l">FT Asia Pacific<br>High-Growth</div></div>
     <div class="aw-stat"><div class="aw-stat-n">Top 100</div><div class="aw-stat-l">Red Herring<br>Asia</div></div>
   </div>
@@ -206,7 +206,7 @@
     <div>
       <div class="footer-col-head">Connect</div>
       <div class="footer-col-links">
-        <a href="mailto:tanuj@squareyards.com" class="footer-col-a">tanuj@squareyards.com</a>
+        <a href="mailto:tanuj.s@squareyards.com" class="footer-col-a">tanuj.s@squareyards.com</a>
         <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="footer-col-a">LinkedIn</a>
         <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="footer-col-a">YouTube</a>
         <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Square Yards</a>
@@ -214,7 +214,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">© 2025 Tanuj Shori · Founder &amp; CEO, Square Yards · Dubai &amp; Gurugram</span>
+    <span class="footer-copy">© 2026 Tanuj Shori · Founder &amp; CEO, Square Yards · Dubai &amp; Gurugram</span>
     <div class="footer-bottom-links">
       <a href="articles.html" class="footer-bottom-a">Articles</a>
       <a href="media.html" class="footer-bottom-a">Media</a>

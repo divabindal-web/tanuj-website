@@ -288,3 +288,12 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;}
 .nav-ico:hover{color:var(--gold);}
 .nav-ico svg{width:17px;height:17px;}
 @media(max-width:860px){.nav-social{display:none;}}
+
+/* Footer alignment refinements */
+@media(min-width:1025px){
+  .footer-inner{grid-template-columns:1.6fr .9fr .95fr 1.35fr;gap:56px;align-items:start;}
+}
+.footer-col-a{display:inline-flex;align-items:center;gap:8px;line-height:1.5;}
+.footer-col-a svg{flex:none;position:relative;top:0;}
+.footer-brand-desc{max-width:34ch;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}

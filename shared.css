@@ -380,3 +380,6 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;}
 /* Card tilt glare */
 .tg-glare{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;z-index:3;}
 [data-tilt]{will-change:transform;}
+
+/* Retire the sliding cover panel; blur-up reveals handle entrances now */
+.img-rev::after{display:none !important;}

@@ -104,7 +104,18 @@
   .img-rev::after{display:none;}
 }
 </style>
-<style>.feat-sm,.feat-big{transition:transform .35s cubic-bezier(.16,1,.3,1);}.feat-sm:hover{transform:translateY(-3px);}</style></head>
+<style>.feat-sm,.feat-big{transition:transform .35s cubic-bezier(.16,1,.3,1);}.feat-sm:hover{transform:translateY(-3px);}</style><style>
+.feat-photo{position:relative;overflow:hidden;min-height:238px;display:flex;flex-direction:column;justify-content:flex-end;padding:26px;background:var(--ink);}
+.feat-photo .feat-big-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.16,1,.3,1);}
+.feat-photo:hover .feat-big-img img{transform:scale(1.05);}
+.fp-title{font-family:var(--serif);font-size:17px;font-weight:600;color:#F7F4EE;line-height:1.4;margin-bottom:8px;}
+.featured-row{gap:1px;}
+@keyframes featIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.feat-big,.feat-photo{animation:featIn .8s cubic-bezier(.16,1,.3,1) both;}
+.feat-photo:nth-child(2){animation-delay:.15s;}
+.feat-photo:nth-child(3){animation-delay:.28s;}
+@media(prefers-reduced-motion:reduce){.feat-big,.feat-photo{animation:none;}}
+</style></head>
 <body>
 <div class="cur" id="cur"></div>
 <div class="cur-ring" id="ring"></div>
@@ -116,6 +127,7 @@
     <a href="media.html" class="nav-a">Media</a>
     <a href="awards.html" class="nav-a">Awards</a>
     <a href="videos.html" class="nav-a">Videos</a>
+    <a href="research.html" class="nav-a">Research</a>
     <a href="index.html#connect" class="nav-a">Connect</a>
   </div>
   <div class="burger" id="burger"><span></span><span></span><span></span></div>
@@ -125,6 +137,7 @@
   <a href="media.html" class="mob-a">Media</a>
   <a href="awards.html" class="mob-a">Awards</a>
   <a href="videos.html" class="mob-a">Videos</a>
+  <a href="research.html" class="mob-a">Research</a>
   <a href="index.html#connect" class="mob-a">Connect</a>
 </div>
 
@@ -139,24 +152,32 @@
 
 <!-- FEATURED EDITORIAL LAYOUT -->
 <div class="featured-row">
-  <a href="https://www.tanujshori.com/article/square-yards-continues-its-profitability-streak-over-rs-350-crores-revenue-for-financial-year-2025-quarter-3/" target="_blank" rel="noopener" class="feat-big rv">
-    <div class="feat-big-img img-rev cover-1"><div class="svg-overlay svg-light"><span class="svg-txt">₹350Cr+</span></div></div>
+  <a href="https://www.tanujshori.com/article/square-yards-continues-its-profitability-streak-over-rs-350-crores-revenue-for-financial-year-2025-quarter-3/" target="_blank" rel="noopener" class="feat-big">
+    <div class="feat-big-img"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&h=560&q=80" alt="Financial towers at golden hour" loading="eager"></div>
     <div class="feat-big-overlay"></div>
     <div class="feat-big-content">
       <div class="feat-big-cat">Financial Update · Q3 FY25</div>
       <div class="feat-big-title">Square Yards Continues Its Profitability Streak: Over ₹350 Crores Revenue for Financial Year 2025 Quarter 3</div>
-      <div class="feat-big-yr">2025</div>
+      <div class="feat-big-yr">2025 &nbsp;·&nbsp; Read on tanujshori.com ↗</div>
     </div>
   </a>
-  <a href="https://www.tanujshori.com/article/market-boom-5-5-lakh-deals-worth-rs-4-trillion-prices-skyrocket-60-percent-in-5-years/" target="_blank" rel="noopener" class="feat-sm">
-    <div class="feat-sm-cat">Market Analysis</div>
-    <div class="feat-sm-title">Market Boom: 5.5 Lakh Deals Worth ₹4 Trillion. Prices Up 60% in Five Years</div>
-    <div class="feat-sm-yr">2024</div>
+  <a href="https://www.tanujshori.com/article/market-boom-5-5-lakh-deals-worth-rs-4-trillion-prices-skyrocket-60-percent-in-5-years/" target="_blank" rel="noopener" class="feat-photo">
+    <div class="feat-big-img"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=900&h=560&q=80" alt="Aerial city view" loading="eager"></div>
+    <div class="feat-big-overlay"></div>
+    <div class="feat-big-content">
+      <div class="feat-big-cat">Market Analysis</div>
+      <div class="fp-title">Market Boom: 5.5 Lakh Deals Worth ₹4 Trillion. Prices Up 60% in Five Years</div>
+      <div class="feat-big-yr">2024</div>
+    </div>
   </a>
-  <a href="https://www.tanujshori.com/article/square-yards-posts-inr-261-revenue-registers-52-y-o-y-revenue-growth-in-q1-fy25/" target="_blank" rel="noopener" class="feat-sm">
-    <div class="feat-sm-cat">Quarterly Results · Q1 FY25</div>
-    <div class="feat-sm-title">Square Yards Posts ₹261 Cr Revenue: 52% YoY Revenue Growth</div>
-    <div class="feat-sm-yr">2024</div>
+  <a href="https://www.tanujshori.com/article/square-yards-posts-inr-261-revenue-registers-52-y-o-y-revenue-growth-in-q1-fy25/" target="_blank" rel="noopener" class="feat-photo">
+    <div class="feat-big-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&h=560&q=80" alt="Real estate agreement" loading="eager"></div>
+    <div class="feat-big-overlay"></div>
+    <div class="feat-big-content">
+      <div class="feat-big-cat">Quarterly Results · Q1 FY25</div>
+      <div class="fp-title">Square Yards Posts ₹261 Cr Revenue: 52% YoY Revenue Growth</div>
+      <div class="feat-big-yr">2024</div>
+    </div>
   </a>
 </div>
 
@@ -174,23 +195,23 @@
     <div class="mag-body"><p class="mag-excerpt">Financial services posted a 2x growth run rate, touching USD $300M in disbursements.</p><div class="mag-meta"><span class="mag-yr">2024</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
   <a href="https://www.tanujshori.com/article/square-yards-posts-stellar-revenue-feat-for-fy2022-23/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="financial">
-    <div class="mag-cover"><span class="mag-badge">Annual Review</span><img src="https://images.unsplash.com/photo-1496514428289-1e75a4dee5db?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Square Yards Posts Stellar Revenue for FY 2022-23</span></div>
+    <div class="mag-cover"><span class="mag-badge">Annual Review</span><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Square Yards Posts Stellar Revenue for FY 2022-23</span></div>
     <div class="mag-body"><p class="mag-excerpt">$125M raised in total funding, with profitability in sight.</p><div class="mag-meta"><span class="mag-yr">2023</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
   <a href="https://www.tanujshori.com/article/azuro-by-square-yards-achieves-huge-milestone-for-its-property-management-business/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="product">
-    <div class="mag-cover"><span class="mag-badge">Product</span><img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Azuro Hits a Major Property-Management Milestone</span></div>
+    <div class="mag-cover"><span class="mag-badge">Product</span><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Azuro Hits a Major Property-Management Milestone</span></div>
     <div class="mag-body"><p class="mag-excerpt">Growing its share of India's property management market.</p><div class="mag-meta"><span class="mag-yr">2022</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
   <a href="https://www.tanujshori.com/article/square-yards-gets-into-fractional-ownership-category-with-new-venture/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="product">
-    <div class="mag-cover"><span class="mag-badge">New Ventures</span><img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Square Yards Enters Fractional Ownership with PropsAMC</span></div>
+    <div class="mag-cover"><span class="mag-badge">New Ventures</span><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">Square Yards Enters Fractional Ownership with PropsAMC</span></div>
     <div class="mag-body"><p class="mag-excerpt">Raising capital for Grade-A commercial property via data intelligence.</p><div class="mag-meta"><span class="mag-yr">2022</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
   <a href="https://www.tanujshori.com/article/an-innovative-ai-based-marketing-and-sales-platform-from-square-yards/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="product">
-    <div class="mag-cover"><span class="mag-badge">Technology</span><img src="https://images.unsplash.com/photo-1496514428289-1e75a4dee5db?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">SmartAgent: AI Sales & Marketing for Agents</span></div>
+    <div class="mag-cover"><span class="mag-badge">Technology</span><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">SmartAgent: AI Sales & Marketing for Agents</span></div>
     <div class="mag-body"><p class="mag-excerpt">Launched for the UAE's real estate agencies, AI-powered at scale.</p><div class="mag-meta"><span class="mag-yr">2023</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
   <a href="https://www.tanujshori.com/article/square-yards-the-team-no-1-in-the-real-estate-market-with-20-co-founders/" target="_blank" rel="noopener" class="mag-card a-card rv" data-cat="market">
-    <div class="mag-cover"><span class="mag-badge">Company</span><img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">The Team Number One, Built on 20 Co-Founders</span></div>
+    <div class="mag-cover"><span class="mag-badge">Company</span><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="mag-cover-title">The Team Number One, Built on 20 Co-Founders</span></div>
     <div class="mag-body"><p class="mag-excerpt">How a co-founder culture created India's most resilient proptech team.</p><div class="mag-meta"><span class="mag-yr">2022</span><span class="mag-read">Read<span>&#8599;</span></span></div></div>
   </a>
 </div></div>

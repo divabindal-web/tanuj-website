@@ -31,11 +31,12 @@ body{animation:pageIn .5s ease both;}
 .r-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;}
 .r-card{display:flex;flex-direction:column;background:var(--parchment);border:1px solid var(--ink08);border-radius:16px;overflow:hidden;transition:transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s,border-color .32s;}
 .r-card:hover{transform:translateY(-7px);box-shadow:0 28px 56px -32px rgba(14,12,7,.55);border-color:var(--gold-rule);}
-.r-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--cream);}
+.r-cover{position:relative;aspect-ratio:1.91/1;overflow:hidden;background:var(--cream);}
 .r-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
 .r-card:hover .r-cover img{transform:scale(1.06);}
 .r-badge{position:absolute;top:15px;left:15px;z-index:2;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F7F4EE;background:rgba(181,136,31,.92);padding:6px 12px;border-radius:100px;}
-.r-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;}
+.r-tag{font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+.r-body{padding:18px 22px 22px;display:flex;flex-direction:column;flex:1;}
 .r-title{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink);line-height:1.38;flex:1;transition:color .2s;}
 .r-card:hover .r-title{color:var(--gold);}
 .r-meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--ink08);}
@@ -81,60 +82,60 @@ body{animation:pageIn .5s ease both;}
 <div class="r-wrap">
   <div class="r-grid">
   <a href="https://www.squareyards.com/research-reports/southern-peripheral-road-gurugram-premium-growth-corridor" target="_blank" rel="noopener" class="r-card rv">
-    <div class="r-cover"><span class="r-badge">Growth Corridors</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/05/spr-gurugram-real-estate-growth.jpeg" alt="Southern Peripheral Road, Gurugram: Premium Growth Corridor" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Southern Peripheral Road, Gurugram: Premium Growth Corridor</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/05/spr-gurugram-real-estate-growth.jpeg" alt="Southern Peripheral Road, Gurugram: Premium Growth Corridor" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Growth Corridors</div><div class="r-title">Southern Peripheral Road, Gurugram: Premium Growth Corridor</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/runway-to-realty-noida-international-airport-reshaping-real-estate" target="_blank" rel="noopener" class="r-card rv d1">
-    <div class="r-cover"><span class="r-badge">Infrastructure</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/noida-airport-real-estate-growth.jpeg" alt="Runway to Realty: How Noida International Airport is Reshaping Real Estate" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Runway to Realty: How Noida International Airport is Reshaping Real Estate</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/noida-airport-real-estate-growth.jpeg" alt="Runway to Realty: How Noida International Airport is Reshaping Real Estate" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Infrastructure</div><div class="r-title">Runway to Realty: How Noida International Airport is Reshaping Real Estate</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/union-budget-2026-impact-on-real-estate" target="_blank" rel="noopener" class="r-card rv d2">
-    <div class="r-cover"><span class="r-badge">Policy</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/impact-of-union-budget-2026-on-india-property-market.png" alt="How Budget 2026 Sets the Road Map for Housing Market Growth" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">How Budget 2026 Sets the Road Map for Housing Market Growth</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/impact-of-union-budget-2026-on-india-property-market.png" alt="How Budget 2026 Sets the Road Map for Housing Market Growth" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Policy</div><div class="r-title">How Budget 2026 Sets the Road Map for Housing Market Growth</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/women-housing-finance-india-urban-money-report" target="_blank" rel="noopener" class="r-card rv">
-    <div class="r-cover"><span class="r-badge">Housing Finance</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/women-and-housing-finance-in-india-urban-money-report-insights.jpg" alt="Women and Housing Finance in India: Progress, Challenges, and the Road Ahead" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Women and Housing Finance in India: Progress, Challenges, and the Road Ahead</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/women-and-housing-finance-in-india-urban-money-report-insights.jpg" alt="Women and Housing Finance in India: Progress, Challenges, and the Road Ahead" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Housing Finance</div><div class="r-title">Women and Housing Finance in India: Progress, Challenges, and the Road Ahead</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/india-home-loan-demand-shifts-beyond-metros" target="_blank" rel="noopener" class="r-card rv d1">
-    <div class="r-cover"><span class="r-badge">Housing Finance</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/india-home-loan-demand-beyond-metros.jpeg" alt="India Home Loan Demand Shifts Beyond Metros" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">India Home Loan Demand Shifts Beyond Metros</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/india-home-loan-demand-beyond-metros.jpeg" alt="India Home Loan Demand Shifts Beyond Metros" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Housing Finance</div><div class="r-title">India Home Loan Demand Shifts Beyond Metros</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/cost-of-owning-3bhk-in-india" target="_blank" rel="noopener" class="r-card rv d2">
-    <div class="r-cover"><span class="r-badge">Consumer Research</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/cost-of-owning-a-3bhk-in-india.jpeg" alt="From Aspiration to Reality: The Cost of Owning a 3BHK in India" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">From Aspiration to Reality: The Cost of Owning a 3BHK in India</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/cost-of-owning-a-3bhk-in-india.jpeg" alt="From Aspiration to Reality: The Cost of Owning a 3BHK in India" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Consumer Research</div><div class="r-title">From Aspiration to Reality: The Cost of Owning a 3BHK in India</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/mid-segment-to-drive-india-residential-growth-2026" target="_blank" rel="noopener" class="r-card rv">
-    <div class="r-cover"><span class="r-badge">Market Outlook</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/india-residential-real-estate-outlook-2026.jpeg" alt="Mid-Segment to Drive Growth in 2026 with Affordability in Focus" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Mid-Segment to Drive Growth in 2026 with Affordability in Focus</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/india-residential-real-estate-outlook-2026.jpeg" alt="Mid-Segment to Drive Growth in 2026 with Affordability in Focus" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Market Outlook</div><div class="r-title">Mid-Segment to Drive Growth in 2026 with Affordability in Focus</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/dwarka-expressway-price-growth-ncr" target="_blank" rel="noopener" class="r-card rv d1">
-    <div class="r-cover"><span class="r-badge">Growth Corridors</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/dwarka-expressway-residential-price-growth.jpg" alt="Dwarka Expressway: NCR's Fastest-Growing Residential Corridor, Prices Up 3.5x in Five Years" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Dwarka Expressway: NCR's Fastest-Growing Residential Corridor, Prices Up 3.5x in Five Years</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/dwarka-expressway-residential-price-growth.jpg" alt="Dwarka Expressway: NCR's Fastest-Growing Residential Corridor, Prices Up 3.5x in Five Years" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Growth Corridors</div><div class="r-title">Dwarka Expressway: NCR's Fastest-Growing Residential Corridor, Prices Up 3.5x in Five Years</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/cities-in-motion-urban-expansion-in-indian-real-estate" target="_blank" rel="noopener" class="r-card rv d2">
-    <div class="r-cover"><span class="r-badge">Urbanisation</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/cities-in-motion-banner.jpg" alt="Cities in Motion: 30 Years of Urban Expansion Transforming India's Real Estate" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Cities in Motion: 30 Years of Urban Expansion Transforming India's Real Estate</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/cities-in-motion-banner.jpg" alt="Cities in Motion: 30 Years of Urban Expansion Transforming India's Real Estate" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Urbanisation</div><div class="r-title">Cities in Motion: 30 Years of Urban Expansion Transforming India's Real Estate</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/dwarka-expressway-property-prices-rise-new-supply-boost" target="_blank" rel="noopener" class="r-card rv">
-    <div class="r-cover"><span class="r-badge">Market Data</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/dwarka-expressway-banner.jpg" alt="Dwarka Expressway Sees Major New Supply Boost; Prices Grow in Double Digits" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Dwarka Expressway Sees Major New Supply Boost; Prices Grow in Double Digits</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/dwarka-expressway-banner.jpg" alt="Dwarka Expressway Sees Major New Supply Boost; Prices Grow in Double Digits" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Market Data</div><div class="r-title">Dwarka Expressway Sees Major New Supply Boost; Prices Grow in Double Digits</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/women-homebuyers-on-the-rise-india-2024-square-yards" target="_blank" rel="noopener" class="r-card rv d1">
-    <div class="r-cover"><span class="r-badge">Consumer Research</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/women-driving-real-estate-growth-and-transformation-banner.jpg" alt="Women Empowering Real Estate: Driving Growth, Equality, and Transformation" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Women Empowering Real Estate: Driving Growth, Equality, and Transformation</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/women-driving-real-estate-growth-and-transformation-banner.jpg" alt="Women Empowering Real Estate: Driving Growth, Equality, and Transformation" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Consumer Research</div><div class="r-title">Women Empowering Real Estate: Driving Growth, Equality, and Transformation</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/fy2025-residential-registrations-rise" target="_blank" rel="noopener" class="r-card rv d2">
-    <div class="r-cover"><span class="r-badge">Market Data</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/primary-vs-secondary-banner.jpg" alt="FY 2025 Residential Registrations Hit 5.44 Lakh, Up 77% from FY 2019" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">FY 2025 Residential Registrations Hit 5.44 Lakh, Up 77% from FY 2019</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/primary-vs-secondary-banner.jpg" alt="FY 2025 Residential Registrations Hit 5.44 Lakh, Up 77% from FY 2019" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Market Data</div><div class="r-title">FY 2025 Residential Registrations Hit 5.44 Lakh, Up 77% from FY 2019</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/high-value-loans-real-estate-india" target="_blank" rel="noopener" class="r-card rv">
-    <div class="r-cover"><span class="r-badge">Housing Finance</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/high-value-loans-real-estate-india-banner.jpg" alt="Housing Finance Powers a ₹33 Lakh Crore Boom, Set to Reach ₹75 Lakh Crore by 2030" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Housing Finance Powers a ₹33 Lakh Crore Boom, Set to Reach ₹75 Lakh Crore by 2030</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/high-value-loans-real-estate-india-banner.jpg" alt="Housing Finance Powers a ₹33 Lakh Crore Boom, Set to Reach ₹75 Lakh Crore by 2030" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Housing Finance</div><div class="r-title">Housing Finance Powers a ₹33 Lakh Crore Boom, Set to Reach ₹75 Lakh Crore by 2030</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   <a href="https://www.squareyards.com/research-reports/property-price-surge-near-airports" target="_blank" rel="noopener" class="r-card rv d1">
-    <div class="r-cover"><span class="r-badge">Infrastructure</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2025/10/jet-set-growth-banner.jpg" alt="Airport-Led Development Fueling India's Boom with 140+ Airports and New Growth Corridors" loading="lazy"></div>
-    <div class="r-body"><div class="r-title">Airport-Led Development Fueling India's Boom with 140+ Airports and New Growth Corridors</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+    <div class="r-cover"><img src="https://www.squareyards.com/blog/wp-content/uploads/2025/10/jet-set-growth-banner.jpg" alt="Airport-Led Development Fueling India's Boom with 140+ Airports and New Growth Corridors" loading="lazy"></div>
+    <div class="r-body"><div class="r-tag">Infrastructure</div><div class="r-title">Airport-Led Development Fueling India's Boom with 140+ Airports and New Growth Corridors</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
   </a>
   </div>
   <div style="text-align:center;padding-top:56px;">

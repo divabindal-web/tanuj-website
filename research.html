@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Research &amp; Insights · Tanuj Shori</title>
+<meta name="description" content="Research reports and market intelligence from Square Yards: data-driven property trends, growth corridors, housing finance and urbanisation studies.">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* ── PREMIUM MOTION ── */
+@keyframes mRise{from{transform:translateY(112%)}to{transform:translateY(0)}}
+@keyframes lineGrow{from{width:0}to{width:28px}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(44px,-30px) scale(1.14)}}
+@keyframes orbB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-52px,26px) scale(1.07)}}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+body{animation:pageIn .5s ease both;}
+.page-header{position:relative;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;opacity:.55;z-index:0;}
+.orb-a{width:360px;height:360px;right:6%;top:-90px;background:radial-gradient(circle,rgba(181,136,31,.20),transparent 70%);animation:orbA 14s ease-in-out infinite;}
+.orb-b{width:280px;height:280px;right:26%;bottom:-110px;background:radial-gradient(circle,rgba(181,136,31,.11),transparent 70%);animation:orbB 18s ease-in-out infinite;}
+.page-header>*:not(.orb){position:relative;z-index:1;}
+.page-header-eye-line{animation:lineGrow .8s cubic-bezier(.16,1,.3,1) both;}
+.page-header-eye-text{animation:fadeUp .7s .15s cubic-bezier(.16,1,.3,1) both;}
+.mline{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em;}
+.mline-in{display:inline-block;transform:translateY(112%);animation:mRise .95s .18s cubic-bezier(.16,1,.3,1) forwards;}
+.mline:nth-of-type(2) .mline-in{animation-delay:.34s;}
+.page-header-sub{animation:fadeUp .8s .58s cubic-bezier(.16,1,.3,1) both;}
+/* research cards */
+.r-wrap{max-width:1180px;margin:0 auto;padding:56px var(--pad) 80px;}
+.r-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;}
+.r-card{display:flex;flex-direction:column;background:var(--parchment);border:1px solid var(--ink08);border-radius:16px;overflow:hidden;transition:transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s,border-color .32s;}
+.r-card:hover{transform:translateY(-7px);box-shadow:0 28px 56px -32px rgba(14,12,7,.55);border-color:var(--gold-rule);}
+.r-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--cream);}
+.r-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.r-card:hover .r-cover img{transform:scale(1.06);}
+.r-badge{position:absolute;top:15px;left:15px;z-index:2;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F7F4EE;background:rgba(181,136,31,.92);padding:6px 12px;border-radius:100px;}
+.r-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;}
+.r-title{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink);line-height:1.38;flex:1;transition:color .2s;}
+.r-card:hover .r-title{color:var(--gold);}
+.r-meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--ink08);}
+.r-src{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink45);}
+.r-arr{color:var(--ink45);transition:color .2s,transform .2s;}
+.r-card:hover .r-arr{color:var(--gold);transform:translate(2px,-2px);}
+@media(prefers-reduced-motion:reduce){.mline-in,.page-header-eye-line,.page-header-eye-text,.page-header-sub{animation:none!important;transform:none!important;opacity:1!important;}.orb{display:none;}}
+</style>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="ring"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">Tanuj Shori</a>
+  <div class="nav-links">
+    <a href="articles.html" class="nav-a">Articles</a>
+    <a href="media.html" class="nav-a">Media</a>
+    <a href="awards.html" class="nav-a">Awards</a>
+    <a href="videos.html" class="nav-a">Videos</a>
+    <a href="research.html" class="nav-a active">Research</a>
+    <a href="index.html#connect" class="nav-a">Connect</a>
+  </div>
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-drawer" id="drawer">
+  <a href="articles.html" class="mob-a">Articles</a>
+  <a href="media.html" class="mob-a">Media</a>
+  <a href="awards.html" class="mob-a">Awards</a>
+  <a href="videos.html" class="mob-a">Videos</a>
+  <a href="research.html" class="mob-a">Research</a>
+  <a href="index.html#connect" class="mob-a">Connect</a>
+</div>
+
+<div class="page-header">
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="page-header-eye rv"><div class="page-header-eye-line"></div><span class="page-header-eye-text">Market Intelligence</span></div>
+  <h1 class="page-header-h"><span class="mline"><span class="mline-in">Research &amp;</span></span> <span class="mline"><span class="mline-in"><em>Insights</em></span></span></h1>
+  <p class="page-header-sub">Data-driven property trends, growth-corridor studies and housing-finance intelligence from the Square Yards research desk.</p>
+</div>
+
+<div class="r-wrap">
+  <div class="r-grid">
+  <a href="https://www.squareyards.com/research-reports/southern-peripheral-road-gurugram-premium-growth-corridor" target="_blank" rel="noopener" class="r-card rv">
+    <div class="r-cover"><span class="r-badge">Growth Corridors</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/05/spr-gurugram-real-estate-growth.jpeg" alt="Southern Peripheral Road, Gurugram: Premium Growth Corridor" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Southern Peripheral Road, Gurugram: Premium Growth Corridor</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/runway-to-realty-noida-international-airport-reshaping-real-estate" target="_blank" rel="noopener" class="r-card rv d1">
+    <div class="r-cover"><span class="r-badge">Infrastructure</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/noida-airport-real-estate-growth.jpeg" alt="Runway to Realty: How Noida International Airport is Reshaping Real Estate" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Runway to Realty: How Noida International Airport is Reshaping Real Estate</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/union-budget-2026-impact-on-real-estate" target="_blank" rel="noopener" class="r-card rv d2">
+    <div class="r-cover"><span class="r-badge">Policy</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/impact-of-union-budget-2026-on-india-property-market.png" alt="How Budget 2026 Sets the Road Map for Housing Market Growth" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">How Budget 2026 Sets the Road Map for Housing Market Growth</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/women-housing-finance-india-urban-money-report" target="_blank" rel="noopener" class="r-card rv">
+    <div class="r-cover"><span class="r-badge">Housing Finance</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/women-and-housing-finance-in-india-urban-money-report-insights.jpg" alt="Women and Housing Finance in India: Progress, Challenges, and the Road Ahead" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Women and Housing Finance in India: Progress, Challenges, and the Road Ahead</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/india-home-loan-demand-shifts-beyond-metros" target="_blank" rel="noopener" class="r-card rv d1">
+    <div class="r-cover"><span class="r-badge">Housing Finance</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/india-home-loan-demand-beyond-metros.jpeg" alt="India Home Loan Demand Shifts Beyond Metros" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">India Home Loan Demand Shifts Beyond Metros</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/cost-of-owning-3bhk-in-india" target="_blank" rel="noopener" class="r-card rv d2">
+    <div class="r-cover"><span class="r-badge">Consumer Research</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/cost-of-owning-a-3bhk-in-india.jpeg" alt="From Aspiration to Reality: The Cost of Owning a 3BHK in India" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">From Aspiration to Reality: The Cost of Owning a 3BHK in India</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/mid-segment-to-drive-india-residential-growth-2026" target="_blank" rel="noopener" class="r-card rv">
+    <div class="r-cover"><span class="r-badge">Market Outlook</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/india-residential-real-estate-outlook-2026.jpeg" alt="Mid-Segment to Drive Growth in 2026 with Affordability in Focus" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Mid-Segment to Drive Growth in 2026 with Affordability in Focus</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/dwarka-expressway-price-growth-ncr" target="_blank" rel="noopener" class="r-card rv d1">
+    <div class="r-cover"><span class="r-badge">Growth Corridors</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/dwarka-expressway-residential-price-growth.jpg" alt="Dwarka Expressway: NCR's Fastest-Growing Residential Corridor, Prices Up 3.5x in Five Years" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Dwarka Expressway: NCR's Fastest-Growing Residential Corridor, Prices Up 3.5x in Five Years</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/cities-in-motion-urban-expansion-in-indian-real-estate" target="_blank" rel="noopener" class="r-card rv d2">
+    <div class="r-cover"><span class="r-badge">Urbanisation</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/cities-in-motion-banner.jpg" alt="Cities in Motion: 30 Years of Urban Expansion Transforming India's Real Estate" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Cities in Motion: 30 Years of Urban Expansion Transforming India's Real Estate</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/dwarka-expressway-property-prices-rise-new-supply-boost" target="_blank" rel="noopener" class="r-card rv">
+    <div class="r-cover"><span class="r-badge">Market Data</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/dwarka-expressway-banner.jpg" alt="Dwarka Expressway Sees Major New Supply Boost; Prices Grow in Double Digits" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Dwarka Expressway Sees Major New Supply Boost; Prices Grow in Double Digits</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/women-homebuyers-on-the-rise-india-2024-square-yards" target="_blank" rel="noopener" class="r-card rv d1">
+    <div class="r-cover"><span class="r-badge">Consumer Research</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/women-driving-real-estate-growth-and-transformation-banner.jpg" alt="Women Empowering Real Estate: Driving Growth, Equality, and Transformation" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Women Empowering Real Estate: Driving Growth, Equality, and Transformation</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/fy2025-residential-registrations-rise" target="_blank" rel="noopener" class="r-card rv d2">
+    <div class="r-cover"><span class="r-badge">Market Data</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/primary-vs-secondary-banner.jpg" alt="FY 2025 Residential Registrations Hit 5.44 Lakh, Up 77% from FY 2019" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">FY 2025 Residential Registrations Hit 5.44 Lakh, Up 77% from FY 2019</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/high-value-loans-real-estate-india" target="_blank" rel="noopener" class="r-card rv">
+    <div class="r-cover"><span class="r-badge">Housing Finance</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2026/04/high-value-loans-real-estate-india-banner.jpg" alt="Housing Finance Powers a ₹33 Lakh Crore Boom, Set to Reach ₹75 Lakh Crore by 2030" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Housing Finance Powers a ₹33 Lakh Crore Boom, Set to Reach ₹75 Lakh Crore by 2030</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  <a href="https://www.squareyards.com/research-reports/property-price-surge-near-airports" target="_blank" rel="noopener" class="r-card rv d1">
+    <div class="r-cover"><span class="r-badge">Infrastructure</span><img src="https://www.squareyards.com/blog/wp-content/uploads/2025/10/jet-set-growth-banner.jpg" alt="Airport-Led Development Fueling India's Boom with 140+ Airports and New Growth Corridors" loading="lazy"></div>
+    <div class="r-body"><div class="r-title">Airport-Led Development Fueling India's Boom with 140+ Airports and New Growth Corridors</div><div class="r-meta"><span class="r-src">Square Yards Research</span><span class="r-arr">&#8599;</span></div></div>
+  </a>
+  </div>
+  <div style="text-align:center;padding-top:56px;">
+    <a href="https://www.squareyards.com/research-reports" target="_blank" rel="noopener" class="btn-ink">View All Research on squareyards.com &#8599;</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Tanuj Shori</div>
+      <div class="footer-brand-sub">Founder &amp; CEO · Square Yards</div>
+      <div class="footer-brand-desc">Built India's largest proptech platform from the conviction that real estate was a data problem, not a brokerage one. ₹1,400 Cr+ revenue across 9 countries.</div>
+    </div>
+    <div>
+      <div class="footer-col-head">Navigate</div>
+      <div class="footer-col-links">
+        <a href="index.html" class="footer-col-a">Home</a>
+        <a href="index.html#ecosystem" class="footer-col-a">Square Yards Ecosystem</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Content</div>
+      <div class="footer-col-links">
+        <a href="articles.html" class="footer-col-a">Articles</a>
+        <a href="media.html" class="footer-col-a">Media Coverage</a>
+        <a href="awards.html" class="footer-col-a">Awards &amp; Recognition</a>
+        <a href="videos.html" class="footer-col-a">Videos</a>
+        <a href="research.html" class="footer-col-a">Research</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Connect</div>
+      <div class="footer-col-links">
+        <a href="mailto:tanuj@squareyards.com" class="footer-col-a">tanuj@squareyards.com</a>
+        <a href="https://www.linkedin.com/in/tanuj-shori-420b402/" target="_blank" rel="noopener" class="footer-col-a">LinkedIn</a>
+        <a href="https://www.youtube.com/channel/UCA9dt3sQlYdMNg7EwJvCCUQ" target="_blank" rel="noopener" class="footer-col-a">YouTube</a>
+        <a href="https://www.squareyards.com" target="_blank" rel="noopener" class="footer-col-a">Square Yards</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Tanuj Shori · Founder &amp; CEO, Square Yards · Dubai &amp; Gurugram</span>
+    <div class="footer-bottom-links">
+      <a href="articles.html" class="footer-bottom-a">Articles</a>
+      <a href="media.html" class="footer-bottom-a">Media</a>
+      <a href="awards.html" class="footer-bottom-a">Awards</a>
+      <a href="videos.html" class="footer-bottom-a">Videos</a>
+      <a href="research.html" class="footer-bottom-a">Research</a>
+    </div>
+  </div>
+</footer>
+<script src="shared.js"></script>
+</body>
+</html>
